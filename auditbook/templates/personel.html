@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人员/设备</title>
+    <link rel="stylesheet" href="/static/bs/bs3.3.7/css/bootstrap.min.css">
+    <style>
+        body{
+            padding-top: 50px;
+        }
+        .table-striped>tbody>tr:nth-of-type(odd){
+            background-color: lightblue;
+        }
+        #content1 div{
+            display: none;
+        }
+        li{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand">Audit.com</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="{% url 'index' %}">首页</a></li>
+            <li><a href="{% url 'zhunze' %}">准则/标准</a></li>
+            <li><a href="{% url 'tixi' %}">体系文件</a></li>
+            <li><a href="{% url 'personel' %}">人员/设备</a></li>
+            <li><a href="{% url 'record' %}">历年记录</a></li>
+            <li><a href="{% url 'getready' %}">审核准备</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Hi!&nbsp{{ request.user.username }}</a></li>
+            <li><a href="{% url 'logout' %}">注销</a></li>
+            <li>{{ ret }}</li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="col-md-2">
+        <div class="nav nav-tabs" style="text-align: center;padding-top: 8px;background:#31b0d5;color: white;height: 40px">人&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp员</div>
+            <ul id="renyuan" class="nav navbar-default">
+                <li><a href="#">管理层</a></li>
+                <li><a href="#">QA人员</a></li>
+                <li><a href="#">授权签字人</a></li>
+                <li><a href="#">内审员</a></li>
+                <li><a href="#">各专业技术人员</a></li>
+                <br><p style="text-align: center;padding-top: 8px;margin-bottom: 0px;background:#31b0d5;color: white;height: 40px;width: 160px">设&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp备</p>
+                <li><a href="#">化学专业</a></li>
+                <li><a href="#">机性专业</a></li>
+                <li><a href="#">金相专业</a></li>
+                <li><a href="#">计量器具</a></li>
+                <li><a href="#">其他设备</a></li>
+            </ul>
+            <ul class="nav navbar-default" style="margin-top: 30px">
+                <li><a href="{% url 'addperson' %}" style="color: #843534;font-weight: bold;">增加人员</a></li>
+                <li><a href="{% url 'addequip' %}" style="color: #843534;font-weight: bold;">增加设备</a></li>
+            </ul>
+    </div>
+    <div id="content1" class="col-md-10">
+        <div style="display: block">
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#1b6d85;color: white;height: 40px">管理层人员</caption>
+                <thead>
+                    <th>姓名</th>
+                    <th>职务</th>
+                    <th>专业</th>
+                    <th>操作</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ leader.name }}</td>
+                        <td>{{ leader.position }}</td>
+                        <td>{{ leader.profession }}</td>
+                        <td>
+                            <a href="/deleteper/{{ leader.id }}" class="btn btn-danger btn-xs">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{ zhiliang.name }}</td>
+                        <td>{{ zhiliang.position }}</td>
+                        <td>{{ zhiliang.profession }}</td>
+                        <td><a href="" class="btn btn-danger btn-xs">删除</a></td>
+                    </tr>
+                    <tr>
+                        <td>{{ jishu.name }}</td>
+                        <td>{{ jishu.position }}</td>
+                        <td>{{ jishu.profession }}</td>
+                        <td><a href="" class="btn btn-danger btn-xs">删除</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            2
+        </div>
+        <div>
+            3
+        </div>
+        <div>
+            4
+        </div>
+        <div>
+            5
+        </div>
+        <div>
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#1b6d85;color: white;height: 40px">化学专业设备</caption>
+                <thead>
+                    <th>设备名称</th>
+                    <th>设备编号</th>
+                    <th>设备型号</th>
+                    <th>操作</th>
+                </thead>
+                <tbody>
+                    {% for chem in chemequip %}
+                        <tr>
+                            <td>{{ chem.equipname }}</td>
+                            <td>{{ chem.equipno }}</td>
+                            <td>{{ chem.equipmodel }}</td>
+                            <td class="btn btn-group">
+                                <a href="" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#1b6d85;color: white;height: 40px">机性专业设备</caption>
+                <thead>
+                    <th>设备名称</th>
+                    <th>设备编号</th>
+                    <th>设备型号</th>
+                    <th>操作</th>
+                </thead>
+                <tbody>
+                    {% for phy in phyequip %}
+                        <tr>
+                            <td>{{ phy.equipname }}</td>
+                            <td>{{ phy.equipno }}</td>
+                            <td>{{ phy.equipmodel }}</td>
+                            <td class="btn btn-group">
+                                <a href="" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#1b6d85;color: white;height: 40px">金相专业设备</caption>
+                <thead>
+                    <th>设备名称</th>
+                    <th>设备编号</th>
+                    <th>设备型号</th>
+                    <th>操作</th>
+                </thead>
+                <tbody>
+                    {% for jinx in jinxequip %}
+                        <tr>
+                            <td>{{ jinx.equipname }}</td>
+                            <td>{{ jinx.equipno }}</td>
+                            <td>{{ jinx.equipmodel }}</td>
+                            <td class="btn btn-group">
+                                <a href="" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#1b6d85;color: white;height: 40px">计量器具</caption>
+                <thead>
+                    <th>设备名称</th>
+                    <th>设备编号</th>
+                    <th>设备型号</th>
+                    <th>操作</th>
+                </thead>
+                <tbody>
+                    {% for jil in jilequip %}
+                        <tr>
+                            <td>{{ jil.equipname }}</td>
+                            <td>{{ jil.equipno }}</td>
+                            <td>{{ jil.equipmodel }}</td>
+                            <td class="btn btn-group">
+                                <a href="" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#1b6d85;color: white;height: 40px">其他设备</caption>
+                <thead>
+                    <th>设备名称</th>
+                    <th>设备编号</th>
+                    <th>设备型号</th>
+                    <th>操作</th>
+                </thead>
+                <tbody>
+                    {% for els in elseequip %}
+                        <tr>
+                            <td>{{ els.equipname }}</td>
+                            <td>{{ els.equipno }}</td>
+                            <td>{{ els.equipmodel }}</td>
+                            <td class="btn btn-group">
+                                <a href="" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script src="/static/bs/bs3.3.7/js/jquery-3.4.1.js"></script>
+<script src="/static/bs/bs3.3.7/js/bootstrap.min.js"></script>
+<script>
+    var renyuan = document.getElementById('renyuan');
+    var li = renyuan.getElementsByTagName('li');
+    var content = document.getElementById('content1');
+    var p = content.getElementsByTagName('div');
+    for (var i=0;i<li.length;i++){
+        li[i].setAttribute('a',i);
+        li[i].onclick=function () {
+            var a = this.getAttribute('a');
+            this.className='active';
+            for (var j=0;j<p.length;j++){
+                p[j].style.display='none';
+            }
+            p[a].style.display='block';
+        }
+    }
+</script>
+
+</body>
+</html>

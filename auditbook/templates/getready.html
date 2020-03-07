@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>审核准备</title>
+    <link rel="stylesheet" href="/static/bs/bs3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand">Audit.com</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="{% url 'index' %}">首页</a></li>
+            <li><a href="{% url 'zhunze' %}">准则/标准</a></li>
+            <li><a href="{% url 'tixi' %}">体系文件</a></li>
+            <li><a href="{% url 'personel' %}">人员/设备</a></li>
+            <li><a href="{% url 'record' %}">历年记录</a></li>
+            <li><a href="{% url 'getready' %}">审核准备</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Hi!&nbsp{{ request.user.username }}</a></li>
+            <li><a href="{% url 'logout' %}">注销</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<script src="/static/bs/bs3.3.7/js/jquery-3.4.1.js"></script>
+<script src="/static/bs/bs3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

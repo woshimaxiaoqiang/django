@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2a677f81-3257-49e9-8a4b-27d48c84517a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="audit@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="audit@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="audit@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="audit: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WfF2cISvceVZkoUfnWXisDTCiZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mafuqiang\PycharmProjects\auditbook\templates" />
+      <recent name="C:\Users\woshi\PycharmProjects\auditbook\static" />
+      <recent name="C:\Users\woshi\PycharmProjects\auditbook\static\bs\bootstrap-3.3.7-dist\bs3.3.7\js" />
+      <recent name="C:\Users\woshi\PycharmProjects\auditbook\static\bs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\woshi\PycharmProjects\auditbook\static\bs" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="auditbook" type="Python.DjangoServer" factoryName="Django server">
+      <module name="auditbook" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="auditbook.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="9000" />
+      <option name="host" value="127.0.0.1" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a677f81-3257-49e9-8a4b-27d48c84517a" name="Default Changelist" comment="" />
+      <created>1575896133183</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575896133183</updated>
+      <workItem from="1575896137384" duration="6727000" />
+      <workItem from="1575952321424" duration="53000" />
+      <workItem from="1575983450725" duration="43000" />
+      <workItem from="1575984910452" duration="1274000" />
+      <workItem from="1576154793563" duration="8985000" />
+      <workItem from="1576233715219" duration="14875000" />
+      <workItem from="1576252774275" duration="2187000" />
+      <workItem from="1576322030540" duration="6136000" />
+      <workItem from="1576678061962" duration="5052000" />
+      <workItem from="1576763920174" duration="5512000" />
+      <workItem from="1576769494829" duration="21000" />
+      <workItem from="1576816138207" duration="826000" />
+      <workItem from="1576851173245" duration="6984000" />
+      <workItem from="1576861232122" duration="383000" />
+      <workItem from="1577014237167" duration="2892000" />
+      <workItem from="1577102595293" duration="1436000" />
+      <workItem from="1577113004455" duration="3199000" />
+      <workItem from="1577116259358" duration="618000" />
+      <workItem from="1577190766529" duration="11343000" />
+      <workItem from="1577280008733" duration="6909000" />
+      <workItem from="1577334784976" duration="779000" />
+      <workItem from="1577370910701" duration="2862000" />
+      <workItem from="1577373841527" duration="230000" />
+      <workItem from="1577449500244" duration="10807000" />
+      <workItem from="1577460809740" duration="2501000" />
+      <workItem from="1577494240633" duration="6020000" />
+      <workItem from="1577540079120" duration="5404000" />
+      <workItem from="1577604730073" duration="6894000" />
+      <workItem from="1577628603041" duration="1204000" />
+      <workItem from="1577967434785" duration="3815000" />
+      <workItem from="1577975659568" duration="86000" />
+      <workItem from="1578134684578" duration="219000" />
+      <workItem from="1578210701868" duration="1111000" />
+      <workItem from="1578212222411" duration="643000" />
+      <workItem from="1578222807132" duration="4839000" />
+      <workItem from="1578232059325" duration="1067000" />
+      <workItem from="1578308520449" duration="3242000" />
+      <workItem from="1578396867560" duration="634000" />
+      <workItem from="1578406129313" duration="847000" />
+      <workItem from="1578408057014" duration="279000" />
+      <workItem from="1578485332163" duration="1078000" />
+      <workItem from="1578577658758" duration="600000" />
+      <workItem from="1578809726969" duration="6017000" />
+      <workItem from="1578927742161" duration="166000" />
+      <workItem from="1579010090919" duration="553000" />
+      <workItem from="1579099484005" duration="586000" />
+      <workItem from="1579100802877" duration="472000" />
+      <workItem from="1579176426310" duration="312000" />
+      <workItem from="1579339110516" duration="203000" />
+      <workItem from="1579341725363" duration="20000" />
+      <workItem from="1579341813754" duration="489000" />
+      <workItem from="1579434599695" duration="59000" />
+      <workItem from="1579532545392" duration="353000" />
+      <workItem from="1579533531977" duration="46000" />
+      <workItem from="1579533595200" duration="22000" />
+      <workItem from="1579533750415" duration="95000" />
+      <workItem from="1579581496277" duration="88000" />
+      <workItem from="1579611116897" duration="3081000" />
+      <workItem from="1579614636523" duration="453000" />
+      <workItem from="1579617479252" duration="36000" />
+      <workItem from="1579675490363" duration="514000" />
+      <workItem from="1579676258378" duration="605000" />
+      <workItem from="1579677354981" duration="650000" />
+      <workItem from="1579688936201" duration="1089000" />
+      <workItem from="1579690296613" duration="6798000" />
+      <workItem from="1579761462571" duration="983000" />
+      <workItem from="1579763949557" duration="28000" />
+      <workItem from="1579861446702" duration="144000" />
+      <workItem from="1579959469964" duration="3141000" />
+      <workItem from="1580003985277" duration="14000" />
+      <workItem from="1580004222485" duration="3630000" />
+      <workItem from="1580106022188" duration="8161000" />
+      <workItem from="1580175283547" duration="4025000" />
+      <workItem from="1582337236713" duration="155000" />
+      <workItem from="1582340234785" duration="1014000" />
+      <workItem from="1582349717553" duration="1447000" />
+      <workItem from="1582386868417" duration="809000" />
+      <workItem from="1582452332988" duration="64000" />
+      <workItem from="1582454705371" duration="34000" />
+      <workItem from="1582804095799" duration="383000" />
+      <workItem from="1582804660328" duration="11000" />
+      <workItem from="1582805364257" duration="8747000" />
+      <workItem from="1582893170410" duration="7829000" />
+      <workItem from="1582985052776" duration="5760000" />
+      <workItem from="1583031922737" duration="599000" />
+      <workItem from="1583033804839" duration="12406000" />
+      <workItem from="1583152209931" duration="7268000" />
+      <workItem from="1583238700934" duration="12160000" />
+      <workItem from="1583336157585" duration="1441000" />
+      <workItem from="1583417501822" duration="2434000" />
+      <workItem from="1583507097722" duration="327000" />
+      <workItem from="1583507958262" duration="3269000" />
+      <workItem from="1583592982293" duration="517000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="350" y="0" width="594" height="689" key="#auditbook" timestamp="1579675605187">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="350" y="0" width="594" height="689" key="#auditbook/0.0.1280.689@0.0.1280.689" timestamp="1579675605187" />
+    <state x="233" y="4" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579689774511">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="233" y="4" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1579689774511" />
+    <state x="421" y="101" key="FileChooserDialogImpl" timestamp="1582893210551">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="421" y="101" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1582893210551" />
+    <state width="1237" height="103" key="GridCell.Tab.0.bottom" timestamp="1583511377033">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="103" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1583511377033" />
+    <state width="1237" height="103" key="GridCell.Tab.0.center" timestamp="1583511377033">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="103" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1583511377033" />
+    <state width="1237" height="103" key="GridCell.Tab.0.left" timestamp="1583511377033">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="103" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1583511377033" />
+    <state width="1237" height="103" key="GridCell.Tab.0.right" timestamp="1583511377033">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="103" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1583511377033" />
+    <state x="270" y="0" width="914" height="689" key="SettingsEditor" timestamp="1583593499139">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="270" y="0" width="914" height="689" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1583593499139" />
+    <state width="631" height="446" key="SwitcherDM" timestamp="1580122224899">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="631" height="446" key="SwitcherDM/0.0.1280.689@0.0.1280.689" timestamp="1580122224899" />
+    <state x="329" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1583592985582">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="329" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1583592985582" />
+  </component>
+</project>

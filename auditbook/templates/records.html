@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>历年记录</title>
+    <link rel="stylesheet" href="/static/bs/bs3.3.7/css/bootstrap.min.css">
+    <style>
+        body{
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="{% url 'index' %}" class="navbar-brand">Audit.com</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="{% url 'index' %}">首页</a></li>
+            <li><a href="{% url 'zhunze' %}">准则/标准</a></li>
+            <li><a href="{% url 'tixi' %}">体系文件</a></li>
+            <li><a href="{% url 'personel' %}">人员/设备</a></li>
+            <li><a href="{% url 'record' %}">历年记录</a></li>
+            <li><a href="{% url 'getready' %}">审核准备</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Hi!&nbsp{{ request.user.username }}</a></li>
+            <li><a href="{% url 'logout' %}">注销</a></li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="col-md-2">
+        <div class="nav nav-tabs" style="text-align: center;padding-top: 8px;background:#31b0d5;color: white;height: 40px">
+            历年记录
+        </div>
+        <ul id="record" class="nav navbar-default">
+            {% for ti in tim %}
+                <li style="text-align: center"><a href="/records/{{ ti.tab_times }}">{{ ti.tab_times }}&nbsp;年</a></li>
+            {% endfor %}
+        </ul>
+        <ul class="nav navbar-default">
+            <li><a style="padding-left: 50px;color: #ac2925;font-size: 15px" href="{% url 'uploadrecord' %}">上传记录</a></li>
+        </ul>
+    </div>
+    <div class="col-md-10">
+        <div class="col-md-3">
+            <table class="table table-striped table-hover small" border="1" style="text-align: center">
+                <caption style="text-align: center;font-size: 15px;background-color:#1b6d85;color: white;height: 40px">质量记录</caption>
+                <thead>
+                <th style="text-align: center">编号</th>
+                <th style="text-align: center">名称</th>
+                </thead>
+                <tbody>
+                {% for zhil in zhiliang %}
+                    <tr>
+                        <td style="text-align: center">{{ zhil.tabno }}</td>
+                        <td style="text-align: center">{{ zhil.tabname }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-3">
+            <table class="table table-striped table-hover small" border="1">
+                <caption style="text-align: center;font-size: 15px;background-color:#5cb85c;color: white;height: 40px">技术记录</caption>
+                <thead>
+                <th style="text-align: center">编号</th>
+                <th style="text-align: center">名称</th>
+                </thead>
+                <tbody>
+                {% for jis in jishu %}
+                    <tr>
+                        <td style="text-align: center">{{ jis.tabno }}</td>
+                        <td style="text-align: center">{{ jis.tabname }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-3">
+            <table class="table table-striped table-hover small" border="1">
+                <caption style="text-align: center;font-size: 15px;background-color:#8a6d3b;color: white;height: 40px">内审记录</caption>
+                <thead>
+                <th style="text-align: center">编号</th>
+                <th style="text-align: center">名称</th>
+                </thead>
+                <tbody>
+                {% for ne in nei %}
+                    <tr>
+                        <td style="text-align: center">{{ ne.tabno }}</td>
+                        <td style="text-align: center"><a href="/records/{{ ne.tabfile }}">{{ ne.tabname }}</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-3">
+            <table class="table table-striped table-hover small" border="1">
+                <caption style="text-align: center;font-size: 15px;background-color:#888888;color: white;height: 40px">NCR</caption>
+                <thead>
+                <th style="text-align: center">编号</th>
+                <th style="text-align: center">名称</th>
+                </thead>
+                <tbody>
+                {% for nc in ncr %}
+                    <tr>
+                        <td style="text-align: center">{{ nc.tabno }}</td>
+                        <td style="text-align: center">{{ nc.tabname }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<hr>
+
+<script src="/static/bs/bs3.3.7/js/jquery-3.4.1.js"></script>
+<script src="/static/bs/bs3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
