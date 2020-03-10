@@ -227,7 +227,7 @@
 <button class="ajax">Ajax</button>
 <p class="tex"></p>
 <hr>
-<input type="text" id="n1">+<input type="text" id="n2">=<input type="text" id="n3"><button class="cal">计算</button>
+
 <script>
     $(".ajax").click(function () {
         $.ajax({
@@ -243,19 +243,7 @@
             }
         })
     });
-    $(".cal").click(function () {
-        $.ajax({
-            url:"/test_ajax/",
-            type:"post",
-            data:{
-                "num1":$("#n1").val(),
-                "num2":$("#n2").val(),
-            },
-            success:function (data) {
-                $("#n3").val(data)
-            }
-        })
-    })
+
 </script>
 
 {#<script>#}

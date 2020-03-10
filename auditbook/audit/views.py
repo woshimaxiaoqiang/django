@@ -201,8 +201,4 @@ def deleteper(request,perid):
 def test_ajax(request):
     ret = request.GET
     print(ret)
-
-    n1 = int(request.POST.get('num1'))
-    n2 = int(request.POST.get('num2'))
-    n3 = n1+n2
-    return HttpResponse(n3)
+    return HttpResponse('OK')

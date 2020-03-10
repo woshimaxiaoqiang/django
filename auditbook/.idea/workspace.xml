@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a677f81-3257-49e9-8a4b-27d48c84517a" name="Default Changelist" comment="" />
+    <list default="true" id="2a677f81-3257-49e9-8a4b-27d48c84517a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auditbook/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/auditbook/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/programs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/programs.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +53,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1WfF2cISvceVZkoUfnWXisDTCiZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -58,12 +67,13 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -217,6 +227,8 @@
       <workItem from="1583507097722" duration="327000" />
       <workItem from="1583507958262" duration="3269000" />
       <workItem from="1583592982293" duration="517000" />
+      <workItem from="1583644010582" duration="3901000" />
+      <workItem from="1583853897993" duration="245000" />
     </task>
     <servers />
   </component>
@@ -233,6 +245,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="233" y="4" key="#Notifications" timestamp="1583657694002">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="233" y="4" key="#Notifications/0.0.1280.689@0.0.1280.689" timestamp="1583657694002" />
     <state x="350" y="0" width="594" height="689" key="#auditbook" timestamp="1579675605187">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -245,33 +261,37 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="421" y="101" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1582893210551" />
-    <state width="1237" height="103" key="GridCell.Tab.0.bottom" timestamp="1583511377033">
+    <state width="1237" height="117" key="GridCell.Tab.0.bottom" timestamp="1583659401379">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="103" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1583511377033" />
-    <state width="1237" height="103" key="GridCell.Tab.0.center" timestamp="1583511377033">
+    <state width="1237" height="117" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1583659401379" />
+    <state width="1237" height="117" key="GridCell.Tab.0.center" timestamp="1583659401379">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="103" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1583511377033" />
-    <state width="1237" height="103" key="GridCell.Tab.0.left" timestamp="1583511377033">
+    <state width="1237" height="117" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1583659401379" />
+    <state width="1237" height="117" key="GridCell.Tab.0.left" timestamp="1583659401379">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="103" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1583511377033" />
-    <state width="1237" height="103" key="GridCell.Tab.0.right" timestamp="1583511377033">
+    <state width="1237" height="117" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1583659401379" />
+    <state width="1237" height="117" key="GridCell.Tab.0.right" timestamp="1583659401379">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="103" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1583511377033" />
-    <state x="270" y="0" width="914" height="689" key="SettingsEditor" timestamp="1583593499139">
+    <state width="1237" height="117" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1583659401379" />
+    <state x="270" y="0" width="914" height="689" key="SettingsEditor" timestamp="1583854083401">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="270" y="0" width="914" height="689" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1583593499139" />
+    <state x="270" y="0" width="914" height="689" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1583854083401" />
     <state width="631" height="446" key="SwitcherDM" timestamp="1580122224899">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="631" height="446" key="SwitcherDM/0.0.1280.689@0.0.1280.689" timestamp="1580122224899" />
-    <state x="329" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1583592985582">
+    <state x="233" y="79" key="Vcs.Push.Dialog.v2" timestamp="1583854410128">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="329" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1583592985582" />
+    <state x="233" y="79" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1583854410128" />
+    <state x="329" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1583854313791">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="329" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1583854313791" />
   </component>
 </project>
