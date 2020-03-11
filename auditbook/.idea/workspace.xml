@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2a677f81-3257-49e9-8a4b-27d48c84517a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auditbook/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/auditbook/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/programs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/programs.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +51,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1WfF2cISvceVZkoUfnWXisDTCiZ" />
@@ -229,7 +232,17 @@
       <workItem from="1583592982293" duration="517000" />
       <workItem from="1583644010582" duration="3901000" />
       <workItem from="1583853897993" duration="245000" />
+      <workItem from="1583854301066" duration="310000" />
+      <workItem from="1583933222839" duration="317000" />
     </task>
+    <task id="LOCAL-00001" summary="add auditbook project base on django">
+      <created>1583854507132</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583854507132</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -244,11 +257,15 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add auditbook project base on django" />
+    <option name="LAST_COMMIT_MESSAGE" value="add auditbook project base on django" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="4" key="#Notifications" timestamp="1583657694002">
+    <state x="233" y="4" key="#Notifications" timestamp="1583933358736">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="4" key="#Notifications/0.0.1280.689@0.0.1280.689" timestamp="1583657694002" />
+    <state x="233" y="4" key="#Notifications/0.0.1280.689@0.0.1280.689" timestamp="1583933358736" />
     <state x="350" y="0" width="594" height="689" key="#auditbook" timestamp="1579675605187">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -257,6 +274,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="233" y="4" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1579689774511" />
+    <state x="250" y="0" key="CommitChangelistDialog2" timestamp="1583854506221">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="250" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1583854506221" />
     <state x="421" y="101" key="FileChooserDialogImpl" timestamp="1582893210551">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -277,21 +298,25 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="1237" height="117" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1583659401379" />
-    <state x="270" y="0" width="914" height="689" key="SettingsEditor" timestamp="1583854083401">
+    <state x="270" y="0" width="914" height="689" key="SettingsEditor" timestamp="1583933539171">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="270" y="0" width="914" height="689" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1583854083401" />
+    <state x="270" y="0" width="914" height="689" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1583933539171" />
     <state width="631" height="446" key="SwitcherDM" timestamp="1580122224899">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="631" height="446" key="SwitcherDM/0.0.1280.689@0.0.1280.689" timestamp="1580122224899" />
-    <state x="233" y="79" key="Vcs.Push.Dialog.v2" timestamp="1583854410128">
+    <state x="233" y="79" key="Vcs.Push.Dialog.v2" timestamp="1583933550012">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="79" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1583854410128" />
-    <state x="329" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1583854313791">
+    <state x="233" y="79" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1583933550012" />
+    <state x="329" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1583933223753">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="329" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1583854313791" />
+    <state x="329" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1583933223753" />
+    <state x="437" y="263" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583933422515">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="437" y="263" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689" timestamp="1583933422515" />
   </component>
 </project>
