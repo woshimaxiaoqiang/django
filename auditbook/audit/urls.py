@@ -21,5 +21,6 @@ urlpatterns=[
     path('deleteper/<slug:perid>',views.deleteper,name='deleteper'),
     path('records/<tab_time>',views.records,name='records'),
     path('test_ajax/',views.test_ajax,name='ajax'),
-
+    path('yanzhm',views.yanzhm,name='yanzhm'),
+    path('valid_code',views.valid_code,name='valid_code'),
 ]

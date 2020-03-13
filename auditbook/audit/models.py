@@ -10,10 +10,11 @@ class Zhiliangshouce(models.Model):
     shouceauthor = models.CharField('编制者',max_length=20,choices=authorlist)
     shouceadd = models.FileField('选择地址',upload_to='../media/shouce/',default='')
     fileclass = models.CharField('文件分类',choices=fileclasses,max_length=20)
+    user = models.CharField('login_user',max_length=30)
     class Meta:
         verbose_name_plural='体系文件'
     def __str__(self):
-        return 'Zhiliangshouce:{}{}{}'.format(self.shouceno,self.shoucename,self.shouceauthor)
+        return 'Zhiliangshouce:{}{}{}{}'.format(self.shouceno,self.shoucename,self.shouceauthor,self.user)
 
 
 class Stardands(models.Model):

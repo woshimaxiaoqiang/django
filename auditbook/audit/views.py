@@ -8,7 +8,10 @@ from django.core.paginator import Paginator,EmptyPage
 import datetime
 from django.db.models import Avg,Count,Max,Min
 from django.db.models.functions import TruncYear
-
+from io import BytesIO
+import qrcode
+import random
+from PIL import Image,ImageDraw,ImageFont
 
 
 
@@ -65,10 +68,10 @@ def zhunze(request):
     return render(request,'standard.html',locals())
 
 def tixi(request):
-    shouce = Zhiliangshouce.objects.filter(fileclass__icontains='质量手册').order_by('shouceno')
-    chengxu = Zhiliangshouce.objects.filter(fileclass__icontains='程序文件').order_by('shouceno')
-    third = Zhiliangshouce.objects.filter(fileclass__icontains='三层次文件').order_by('shouceno')
-    jishuguanli = Zhiliangshouce.objects.filter(fileclass__icontains='技术管理规定').order_by('shouceno')
+    shouce = Zhiliangshouce.objects.filter(fileclass__icontains='质量手册',user=request.user.username).order_by('shouceno')
+    chengxu = Zhiliangshouce.objects.filter(fileclass__icontains='程序文件',user=request.user.username).order_by('shouceno')
+    third = Zhiliangshouce.objects.filter(fileclass__icontains='三层次文件',user=request.user.username).order_by('shouceno')
+    jishuguanli = Zhiliangshouce.objects.filter(fileclass__icontains='技术管理规定',user=request.user.username).order_by('shouceno')
     #手册分页
     request.session['tim']=datetime.datetime.now().strftime('%Y-%M-%D  %H:%M:%S')
     shoucefenye = Paginator(shouce,2)
@@ -101,7 +104,6 @@ def personel(request):
     jinxequip = Equip.objects.filter(equipfield__icontains='金相').order_by('equipname')
     jilequip = Equip.objects.filter(equipfield__icontains='计量').order_by('equipname')
     elseequip = Equip.objects.filter(equipfield__icontains='其他').order_by('equipname')
-
     return render(request,'personel.html',locals())
 
 
@@ -151,6 +153,7 @@ def uploadfile(request):
         uploadfile = Uploadfile(request.POST,request.FILES)
         if uploadfile.is_valid():
             uploadfile.save()
+            Zhiliangshouce.objects.filter(shouceno=request.POST.get('shouceno')).update(user=request.user.username)
             return redirect('tixi')
     return render(request,'uploadfile.html',locals())
 
@@ -202,3 +205,31 @@ def test_ajax(request):
     ret = request.GET
     print(ret)
     return HttpResponse('OK')
+
+
+def yanzhm(request):
+    data = 'mafuqiang'
+    img = qrcode.make(data)      #传入网站计算出二维码图片字节数据
+    buf = BytesIO()                                 #创建一个BytesIO临时保存生成图片数据
+    img.save(buf)                                   #将图片字节数据放到BytesIO临时保存
+    image_stream = buf.getvalue()                   #在BytesIO临时保存拿出数据
+    response = HttpResponse(image_stream, content_type="image/jpg")  #将二维码数据返回到页面
+    return response
+
+#验证码
+def valid_code(request):
+    def random_color():
+        return (random.randint(0,255),random.randint(0,255),random.randint(0,255))
+    img = Image.new('RGB',(100,32),color=random_color())
+    draw = ImageDraw.Draw(img)
+    font = ImageFont.truetype('static/font/DomoAregato Normal.ttf',size=20)
+    for i in range(5):
+        random_no = str(random.randint(0,9))
+        random_low_alpha = chr(random.randint(95,122))
+        random_upper_alpha = chr(random.randint(65,90))
+        random_char = random.choice([random_no,random_low_alpha,random_upper_alpha])
+        draw.text((20*i+2,5),random_char,random_color(),font=font)
+    f = BytesIO()
+    img.save(f,'png')
+    data = f.getvalue()
+    return HttpResponse(data)

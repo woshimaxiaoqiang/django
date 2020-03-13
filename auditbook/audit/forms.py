@@ -40,7 +40,7 @@ class Reg(forms.Form):
 class Uploadfile(forms.ModelForm):
     class Meta:
         model = Zhiliangshouce
-        fields = '__all__'
+        fields = ['shouceno','shoucename','shouceauthor','shouceadd','fileclass']
         widgets = {
             'shouceno':forms.TextInput(attrs={'class':'form-control'}),
             'shoucename':forms.TextInput(attrs={'class':'form-control'}),

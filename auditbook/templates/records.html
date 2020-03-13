@@ -56,7 +56,7 @@
                 {% for zhil in zhiliang %}
                     <tr>
                         <td style="text-align: center">{{ zhil.tabno }}</td>
-                        <td style="text-align: center">{{ zhil.tabname }}</td>
+                        <td style="text-align: center"><a href="/records/{{ zhil.tabfile }}">{{ zhil.tabname }}</a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
@@ -73,7 +73,7 @@
                 {% for jis in jishu %}
                     <tr>
                         <td style="text-align: center">{{ jis.tabno }}</td>
-                        <td style="text-align: center">{{ jis.tabname }}</td>
+                        <td style="text-align: center"><a href="/records/{{ jis.tabfile }}">{{ jis.tabname }}</a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
@@ -107,7 +107,7 @@
                 {% for nc in ncr %}
                     <tr>
                         <td style="text-align: center">{{ nc.tabno }}</td>
-                        <td style="text-align: center">{{ nc.tabname }}</td>
+                        <td style="text-align: center"><a href="/records/{{ nc.tabfile }}">{{ nc.tabname }}</a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
