@@ -2,91 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a677f81-3257-49e9-8a4b-27d48c84517a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/DomoAregato Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/DomoAregato Normal.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/valid_code/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/valid_code/lena.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ipproxy/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ipproxy/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ipproxy/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ipproxy/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ipproxy/ipproxy/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ipproxy/ipproxy/items.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ipproxy/ipproxy/middlewares.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ipproxy/ipproxy/pipelines.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ipproxy/ipproxy/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ipproxy/ipproxy/spiders/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ipproxy/ipproxy/spiders/ipproxyjob.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ipproxy/ipproxy/start.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ipproxy/scrapy.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ipproxy/selenium/selenium_ch1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/market/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/market/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/market/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/market/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/market/migrations/0002_auto_20200227_2324.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/market/migrations/0003_auto_20200227_2337.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/market/migrations/0004_auto_20200227_2342.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/market/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/market/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/market/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/market/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/market/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/markets/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/markets/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/markets/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/markets/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/markets/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/js/jquery-3.4.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/bs/bs3.3.7/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../markets/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../useragent/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../useragent/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../useragent/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../useragent/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../useragent/scrapy.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../useragent/useragent/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../useragent/useragent/items.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../useragent/useragent/middlewares.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../useragent/useragent/pipelines.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../useragent/useragent/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../useragent/useragent/spiders/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../useragent/useragent/spiders/useragentjob.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../useragent/useragent/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/personel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/records.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/records.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -336,7 +252,7 @@
       <workItem from="1583933222839" duration="4141000" />
       <workItem from="1584021951638" duration="5695000" />
       <workItem from="1584027798342" duration="562000" />
-      <workItem from="1584108192752" duration="5242000" />
+      <workItem from="1584108192752" duration="5539000" />
     </task>
     <task id="LOCAL-00001" summary="add auditbook project base on django">
       <created>1583854507132</created>
@@ -352,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583933604234</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add auditbook project base on django">
+      <created>1584113903445</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584113903446</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,10 +315,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="345" y="148" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.689@0.0.1280.689" timestamp="1584113214121" />
-    <state x="250" y="0" key="CommitChangelistDialog2" timestamp="1583933602877">
+    <state x="250" y="0" key="CommitChangelistDialog2" timestamp="1584113902263">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="250" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1583933602877" />
+    <state x="250" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1584113902263" />
     <state x="121" y="58" width="1024" height="577" key="DiffContextDialog" timestamp="1583936314969">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -408,22 +331,22 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="399" y="225" width="269" height="290" key="Github.ShareDialog/0.0.1280.689@0.0.1280.689" timestamp="1583936420639" />
-    <state width="1237" height="126" key="GridCell.Tab.0.bottom" timestamp="1584110638597">
+    <state width="1237" height="126" key="GridCell.Tab.0.bottom" timestamp="1584114167282">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="126" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1584110638597" />
-    <state width="1237" height="126" key="GridCell.Tab.0.center" timestamp="1584110638597">
+    <state width="1237" height="126" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1584114167282" />
+    <state width="1237" height="126" key="GridCell.Tab.0.center" timestamp="1584114167282">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="126" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1584110638597" />
-    <state width="1237" height="126" key="GridCell.Tab.0.left" timestamp="1584110638597">
+    <state width="1237" height="126" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1584114167282" />
+    <state width="1237" height="126" key="GridCell.Tab.0.left" timestamp="1584114167282">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="126" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1584110638597" />
-    <state width="1237" height="126" key="GridCell.Tab.0.right" timestamp="1584110638597">
+    <state width="1237" height="126" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1584114167282" />
+    <state width="1237" height="126" key="GridCell.Tab.0.right" timestamp="1584114167282">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="126" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1584110638597" />
+    <state width="1237" height="126" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1584114167282" />
     <state x="136" y="0" width="914" height="689" key="SettingsEditor" timestamp="1584109131239">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -432,10 +355,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="631" height="446" key="SwitcherDM/0.0.1280.689@0.0.1280.689" timestamp="1580122224899" />
-    <state x="233" y="79" key="Vcs.Push.Dialog.v2" timestamp="1583936294699">
+    <state x="233" y="79" key="Vcs.Push.Dialog.v2" timestamp="1584113920945">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="79" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1583936294699" />
+    <state x="233" y="79" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1584113920945" />
     <state x="329" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1584108193988">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
