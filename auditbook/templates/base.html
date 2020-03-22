@@ -23,10 +23,13 @@
             <li><a href="{% url 'getready' %}">审核准备</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Hi!&nbsp{{ request.user.username }}</a></li>
-            <li><a href="{% url 'login' %}">登录</a></li>
-            <li><a href="{% url 'reg' %}">注册</a></li>
-            <li><a href="{% url 'logout' %}">注销</a></li>
+            {% if request.user.is_authenticated %}
+                <li><a href="#">Hi!&nbsp{{ request.user.username }}</a></li>
+                <li><a href="{% url 'logout' %}">注销</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}">登录</a></li>
+                <li><a href="{% url 'reg' %}">注册</a></li>
+            {% endif %}
         </ul>
     </div>
 </div>

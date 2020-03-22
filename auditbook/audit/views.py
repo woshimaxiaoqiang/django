@@ -27,10 +27,14 @@ def login(request):
             user = login.cleaned_data.get('user')
             pwd = login.cleaned_data.get('pwd')
             user = auth.authenticate(username=user,password=pwd)
+            is_super = User.objects.filter(username=user).values('is_superuser').first().get('is_superuser')
             if user:
                 auth.login(request,user)
-                next_url = request.GET.get('next','index')
-                return redirect(next_url)
+                if is_super == True:
+                    return redirect('cms')
+                else:
+                    next_url = request.GET.get('next','index')
+                    return redirect(next_url)
             else:
                 return render(request,'reg.html')
     else:
@@ -53,6 +57,10 @@ def reg(request):
             error = reg.errors.get('__all__')
             return render(request,'reg.html',locals())
     return render(request,'reg.html',locals())
+
+
+def cms(request):
+    return render(request,'cms.html',locals())
 
 
 def logout(request):
@@ -208,7 +216,7 @@ def test_ajax(request):
 
 
 def yanzhm(request):
-    data = 'mafuqiang'
+    data = 'http://www.baidu.com'
     img = qrcode.make(data)      #传入网站计算出二维码图片字节数据
     buf = BytesIO()                                 #创建一个BytesIO临时保存生成图片数据
     img.save(buf)                                   #将图片字节数据放到BytesIO临时保存
@@ -223,13 +231,21 @@ def valid_code(request):
     img = Image.new('RGB',(100,32),color=random_color())
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype('static/font/DomoAregato Normal.ttf',size=20)
+    valid_code_str = ''
     for i in range(5):
         random_no = str(random.randint(0,9))
         random_low_alpha = chr(random.randint(95,122))
         random_upper_alpha = chr(random.randint(65,90))
         random_char = random.choice([random_no,random_low_alpha,random_upper_alpha])
         draw.text((20*i+2,5),random_char,random_color(),font=font)
+        #保存验证码
+        valid_code_str+=random_char
+    request.session['valid_code_str']=valid_code_str
     f = BytesIO()
     img.save(f,'png')
     data = f.getvalue()
     return HttpResponse(data)
+
+
+def page_not_found(request,exception,template_name='404.html'):
+    return render(request,template_name)

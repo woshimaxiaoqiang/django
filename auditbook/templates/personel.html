@@ -17,6 +17,12 @@
         li{
             text-align: center;
         }
+        th{
+            text-align: center;
+        }
+        td{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -63,8 +69,8 @@
     </div>
     <div id="content1" class="col-md-10">
         <div style="display: block">
-            <table class="table table-hover table-striped small">
-                <caption style="text-align: center;font-size: 15px;background-color:#1b6d85;color: white;height: 40px">管理层人员</caption>
+            <table class="table table-bordered table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#1b6d85;color: white;height: 40px">管&nbsp;&nbsp;理&nbsp;&nbsp;层&nbsp;&nbsp;人&nbsp;&nbsp;员</caption>
                 <thead>
                     <th>姓名</th>
                     <th>职务</th>
@@ -96,16 +102,84 @@
             </table>
         </div>
         <div>
+            <table class="table table-bordered table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#1b6d85;color: white;height: 40px">Q&nbsp;&nbsp;A&nbsp;&nbsp;人&nbsp;&nbsp;员</caption>
+                <thead>
+                    <th>姓名</th>
+                    <th>职位</th>
+                    <th>专业</th>
+                    <th>操作</th>
+                </thead>
+                <tbody>
+                    {% for q in qa %}
+                        <tr>
+                            <td><a href="">{{ q.name }}</a></td>
+                            <td>{{ q.position }}</td>
+                            <td>{{ q.profession }}</td>
+                            <td class="btn btn-group-xs center-block">
+                                <a href="" class="btn btn-success">查看</a>
+                                <a href="" class="btn btn-danger">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
             <img height="100" width="100" src="{% url 'yanzhm' %}" alt="">
         </div>
         <div>
-            3
+            <table class="table table-bordered table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#1b6d85;color: white;height: 40px">授&nbsp;&nbsp;权&nbsp;&nbsp;签&nbsp;&nbsp;字&nbsp;&nbsp;人</caption>
+                <thead>
+                    <th>姓名</th>
+                    <th>职位</th>
+                    <th>授权领域</th>
+                    <th>操作</th>
+                </thead>
+                <tbody>
+                    {% for qianzi in qianziren %}
+                        <tr>
+                            <td>{{ qianzi.name }}</td>
+                            <td>{{ qianzi.position }}</td>
+                            <td>{{ qianzi.profession }}</td>
+                            <td class="btn btn-group-xs center-block">
+                                <a href="" class="btn btn-success">查看</a>
+                                <a href="" class="btn btn-danger">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
         </div>
         <div>
-            4
+            <table class="table table-bordered table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#1b6d85;color: white;height: 40px">内&nbsp;&nbsp;审&nbsp;&nbsp;员</caption>
+                <thead>
+                    <th>姓名</th>
+                    <th>职称</th>
+                    <th>职位</th>
+                </thead>
+                <tbody>
+                    {% for nei in neishen %}
+                        <tr>
+                            <td>{{ nei.name }}</td>
+                            <td>{{ nei.position }}</td>
+                            <td>{{ nei.profession }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
         <div>
-            5
+            <table class="table table-bordered table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#1b6d85;color: white;height: 40px">各&nbsp;&nbsp;专&nbsp;&nbsp;业&nbsp;&nbsp;技&nbsp;&nbsp;术&nbsp;&nbsp;人&nbsp;&nbsp;员</caption>
+                <thead>
+                    <th>姓名</th>
+                    <th>职称</th>
+                    <th>职位</th>
+                    <th>专业</th>
+                </thead>
+            </table>
         </div>
         <div>
             <table class="table table-hover table-striped small">

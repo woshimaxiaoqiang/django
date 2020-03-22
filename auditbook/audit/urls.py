@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from django.conf.urls import handler404
 
 urlpatterns=[
     path('',views.index,name='index'),
@@ -23,4 +24,6 @@ urlpatterns=[
     path('test_ajax/',views.test_ajax,name='ajax'),
     path('yanzhm',views.yanzhm,name='yanzhm'),
     path('valid_code',views.valid_code,name='valid_code'),
+    path('cms',views.cms,name='cms'),
 ]
+handler404 = views.page_not_found
