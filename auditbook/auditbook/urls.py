@@ -24,4 +24,5 @@ urlpatterns = [
     path('favicon.ico',RedirectView.as_view(url='/static/favicon.ico')),
     path('',include('audit.urls')),
     re_path(r'media/(?P<path>.*)$',serve,{'document_root':MEDIA_ROOT}),
+    path('captcha',include('captcha.urls')),
 ]

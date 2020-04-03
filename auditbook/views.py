@@ -1,18 +1,10 @@
-from django.shortcuts import render,redirect,HttpResponse
+from django.shortcuts import render,redirect
 from .forms import *
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import auth
 from .models import *
 from django.core.paginator import Paginator,EmptyPage
-import datetime
-from django.db.models import Avg,Count,Max,Min
-from django.db.models.functions import TruncYear
-from io import BytesIO
-import qrcode
-import random
-from PIL import Image,ImageDraw,ImageFont
-
 
 
 def index(request):
@@ -27,12 +19,8 @@ def login(request):
             user = login.cleaned_data.get('user')
             pwd = login.cleaned_data.get('pwd')
             user = auth.authenticate(username=user,password=pwd)
-            is_super = User.objects.filter(username=user).values('is_superuser').first().get('is_superuser')
             if user:
                 auth.login(request,user)
-                # if is_super == True:
-                #     return redirect('cms')
-                # else:
                 next_url = request.GET.get('next','index')
                 return redirect(next_url)
             else:
@@ -59,10 +47,6 @@ def reg(request):
     return render(request,'reg.html',locals())
 
 
-def cms(request):
-    return render(request,'cms.html',locals())
-
-
 def logout(request):
     auth.logout(request)
     return redirect('index')
@@ -76,12 +60,11 @@ def zhunze(request):
     return render(request,'standard.html',locals())
 
 def tixi(request):
-    shouce = Zhiliangshouce.objects.filter(fileclass__icontains='质量手册',user=request.user.username).order_by('shouceno')
-    chengxu = Zhiliangshouce.objects.filter(fileclass__icontains='程序文件',user=request.user.username).order_by('shouceno')
-    third = Zhiliangshouce.objects.filter(fileclass__icontains='三层次文件',user=request.user.username).order_by('shouceno')
-    jishuguanli = Zhiliangshouce.objects.filter(fileclass__icontains='技术管理规定',user=request.user.username).order_by('shouceno')
+    shouce = Zhiliangshouce.objects.filter(fileclass__icontains='质量手册').order_by('shouceno')
+    chengxu = Zhiliangshouce.objects.filter(fileclass__icontains='程序文件').order_by('shouceno')
+    third = Zhiliangshouce.objects.filter(fileclass__icontains='三层次文件').order_by('shouceno')
+    jishuguanli = Zhiliangshouce.objects.filter(fileclass__icontains='技术管理规定').order_by('shouceno')
     #手册分页
-    request.session['tim']=datetime.datetime.now().strftime('%Y-%M-%D  %H:%M:%S')
     shoucefenye = Paginator(shouce,2)
     try:
         shoucecurrent_num = int(request.GET.get('page',1))
@@ -116,18 +99,7 @@ def personel(request):
 
 
 def record(request):
-    #session时间记录（实验用）
-    ret = request.session.get('tim')
-    tim = Record.objects.extra(select={"tab_times":"date_format(tabtime,'%%Y')"}).values('tab_times').distinct()
     return render(request,'record.html',locals())
-
-def records(request,tab_time):
-    tim = Record.objects.extra(select={"tab_times":"date_format(tabtime,'%%Y')"}).values('tab_times').distinct()
-    zhiliang = Record.objects.filter(tabtime__year=tab_time,tabtype__contains='质量记录')
-    jishu = Record.objects.filter(tabtime__year=tab_time,tabtype__contains='技术记录')
-    ncr = Record.objects.filter(tabtime__year=tab_time,tabtype__contains='NCR')
-    nei = Record.objects.filter(tabtime__year=tab_time,tabtype__contains='内审记录')
-    return render(request,'records.html',locals())
 
 
 def getready(request):
@@ -161,7 +133,6 @@ def uploadfile(request):
         uploadfile = Uploadfile(request.POST,request.FILES)
         if uploadfile.is_valid():
             uploadfile.save()
-            Zhiliangshouce.objects.filter(shouceno=request.POST.get('shouceno')).update(user=request.user.username)
             return redirect('tixi')
     return render(request,'uploadfile.html',locals())
 
@@ -181,7 +152,7 @@ def uploadstd(request):
 def uploadrecord(request):
     uploadrecord = Records()
     if request.method=='POST':
-        uploadrecord = Records(request.POST,request.FILES)
+        uploadrecord = Records(request.POST)
         if uploadrecord.is_valid():
             uploadrecord.save()
             return redirect('record')
@@ -205,44 +176,3 @@ def deleteper(request,perid):
     Personel.objects.filter(id=perid).delete()
     Equip.objects.filter(id=perid).delete()
     return redirect('personel')
-
-
-
-
-def test_ajax(request):
-    ret = request.GET
-    print(ret)
-    return HttpResponse('OK')
-
-
-def yanzhm(request):
-    data = 'http://www.baidu.com'
-    img = qrcode.make(data)      #传入网站计算出二维码图片字节数据
-    buf = BytesIO()                                 #创建一个BytesIO临时保存生成图片数据
-    img.save(buf)                                   #将图片字节数据放到BytesIO临时保存
-    image_stream = buf.getvalue()                   #在BytesIO临时保存拿出数据
-    response = HttpResponse(image_stream, content_type="image/jpg")  #将二维码数据返回到页面
-    return response
-
-# #验证码
-# def valid_code(request):
-#     def random_color():
-#         return (random.randint(0,255),random.randint(0,255),random.randint(0,255))
-#     img = Image.new('RGB',(100,32),color=random_color())
-#     draw = ImageDraw.Draw(img)
-#     font = ImageFont.truetype('static/font/DomoAregato Normal.ttf',size=20)
-#     valid_code_str = ''
-#     for i in range(5):
-#         random_no = str(random.randint(0,9))
-#         random_low_alpha = chr(random.randint(95,122))
-#         random_upper_alpha = chr(random.randint(65,90))
-#         random_char = random.choice([random_no,random_low_alpha,random_upper_alpha])
-#         draw.text((20*i+2,5),random_char,random_color(),font=font)
-#         #保存验证码
-#         valid_code_str+=random_char
-#     request.session['valid_code_str']=valid_code_str
-#     f = BytesIO()
-#     img.save(f,'png')
-#     data = f.getvalue()
-#     return HttpResponse(data)
-

@@ -3,6 +3,8 @@ from django.forms import widgets
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from .models import *
+from captcha.fields import CaptchaField
+
 
 
 
@@ -17,6 +19,7 @@ class Reg(forms.Form):
     pwd = forms.CharField(min_length=3,label='密码',error_messages={'required':'该字段不能为空'},widget=widgets.PasswordInput())
     repwd = forms.CharField(min_length=3,label='确认密码',error_messages={'required':'该字段不能为空'},widget=widgets.PasswordInput())
     email = forms.EmailField(label='邮箱地址',error_messages={'required':'该字段不能为空'})
+    yanzhengma = CaptchaField()
     def clean_user(self):
         user = self.cleaned_data.get('user')
         user1 = User.objects.filter(username=user)
