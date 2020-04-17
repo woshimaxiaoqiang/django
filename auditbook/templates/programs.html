@@ -69,6 +69,7 @@
                 </caption>
                 <thead>
                     <tr>
+                        <th>序号</th>
                         <th>手册编号</th>
                         <th>手册名称</th>
                         <th>编制者</th>
@@ -78,6 +79,7 @@
                 <tbody id="text">
                     {% for shou in shoucecurrent_page %}
                         <tr style="height: 10px;">
+                            <td>{{ shou.xuhao }}</td>
                             <td>{{ shou.shouceno }}</td>
                             <td><a href="/tixi/{{ shou.shouceadd }}">{{ shou.shoucename }}</a></td>
                             <td>{{ shou.shouceauthor }}</td>

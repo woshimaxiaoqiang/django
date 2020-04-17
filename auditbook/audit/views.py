@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import auth
 from .models import *
 from django.core.paginator import Paginator,EmptyPage
-import datetime
+from datetime import datetime
 from django.db.models import Avg,Count,Max,Min
 from django.db.models.functions import TruncYear
 from io import BytesIO
@@ -30,11 +30,11 @@ def login(request):
             is_super = User.objects.filter(username=user).values('is_superuser').first().get('is_superuser')
             if user:
                 auth.login(request,user)
-                # if is_super == True:
-                #     return redirect('cms')
-                # else:
-                next_url = request.GET.get('next','index')
-                return redirect(next_url)
+                if is_super == True:
+                    return redirect('cms')
+                else:
+                    next_url = request.GET.get('next','index')
+                    return redirect(next_url)
             else:
                 return render(request,'reg.html')
     else:
@@ -76,12 +76,13 @@ def zhunze(request):
     return render(request,'standard.html',locals())
 
 def tixi(request):
-    shouce = Zhiliangshouce.objects.filter(fileclass__icontains='质量手册',user=request.user.username).order_by('shouceno')
+    shouce = Zhiliangshouce.objects.filter(fileclass__icontains='质量手册',user=request.user.username).order_by('-xuhao')
     chengxu = Zhiliangshouce.objects.filter(fileclass__icontains='程序文件',user=request.user.username).order_by('shouceno')
     third = Zhiliangshouce.objects.filter(fileclass__icontains='三层次文件',user=request.user.username).order_by('shouceno')
     jishuguanli = Zhiliangshouce.objects.filter(fileclass__icontains='技术管理规定',user=request.user.username).order_by('shouceno')
+
     #手册分页
-    request.session['tim']=datetime.datetime.now().strftime('%Y-%M-%D  %H:%M:%S')
+    request.session['tim']=datetime.now().strftime('%Y-%M-%D  %H:%M:%S')
     shoucefenye = Paginator(shouce,2)
     try:
         shoucecurrent_num = int(request.GET.get('page',1))
@@ -161,6 +162,13 @@ def uploadfile(request):
         uploadfile = Uploadfile(request.POST,request.FILES)
         if uploadfile.is_valid():
             uploadfile.save()
+            xuhao = int(Zhiliangshouce.objects.filter(fileclass__icontains='质量手册',user=request.user.username).order_by('-xuhao').values('xuhao').first().get('xuhao'))
+            print(xuhao)
+            dt = datetime.now()
+            num = '%04d-%02d' %(dt.year,dt.month)
+            xuhao += 1
+            print(xuhao)
+            Zhiliangshouce.objects.filter(shouceno=request.POST.get('shouceno')).update(xuhao=xuhao)
             Zhiliangshouce.objects.filter(shouceno=request.POST.get('shouceno')).update(user=request.user.username)
             return redirect('tixi')
     return render(request,'uploadfile.html',locals())

@@ -7,7 +7,7 @@ class StardandAdmin(admin.ModelAdmin):
 
 
 class ShouceAdmin(admin.ModelAdmin):
-    list_display = ['shouceno','shoucename','shouceauthor','fileclass']
+    list_display = ['xuhao','shouceno','shoucename','shouceauthor','fileclass']
 
 
 class PersonelAdmin(admin.ModelAdmin):

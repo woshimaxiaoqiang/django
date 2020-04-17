@@ -5,6 +5,7 @@ class Zhiliangshouce(models.Model):
     authorlist = [(v['username'],v['username']) for i, v in enumerate(User.objects.values('username'))]
     fileclasses = [('质量手册','质量手册'),('程序文件','程序文件'),('三层次文件','三层次文件'),('技术管理规定','技术管理规定'),
                    ]
+    xuhao = models.CharField('编号',max_length=100)
     shouceno = models.CharField('文件编号',max_length=20)
     shoucename = models.CharField('文件名称',max_length=100)
     shouceauthor = models.CharField('编制者',max_length=20,choices=authorlist)
@@ -14,7 +15,7 @@ class Zhiliangshouce(models.Model):
     class Meta:
         verbose_name_plural='体系文件'
     def __str__(self):
-        return 'Zhiliangshouce:{}{}{}{}'.format(self.shouceno,self.shoucename,self.shouceauthor,self.user)
+        return 'Zhiliangshouce:{}{}{}{}{}'.format(self.xuhao,self.shouceno,self.shoucename,self.shouceauthor,self.user)
 
 
 class Stardands(models.Model):

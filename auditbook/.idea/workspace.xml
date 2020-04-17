@@ -2,250 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a677f81-3257-49e9-8a4b-27d48c84517a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audit/migrations/0007_auto_20200410_2059.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/shouce/hello_2rq0IRK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/shouce/hello_pgRpIWS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/shouce/lena_Ll4Iabm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/shouce/lena_PguqAdz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/shouce/lena_eMj2YCC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/shouce/lena_qcOpG2r.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/shouce/python_09wqFh4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/shouce/python_4gWmwWM.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/shouce/python_7Id6L40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/shouce/python_BpUTfSd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/shouce/python_Y233Ofx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/shouce/python_pMOKbqq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/shouce/python_v7NkurF.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/auditbook.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/auditbook.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auditbook/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/auditbook/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auditbook/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/auditbook/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/404css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/404js/MvBBBj.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/404js/eEjVBX.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/404js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/asp.net/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/asp.net/bin/LitJSON.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/asp.net/demo.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/asp.net/file_manager_json.ashx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/asp.net/upload_json.ashx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/asp/JSON_2.0.4.asp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/asp/UpLoad_Class.asp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/asp/demo.asp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/asp/file_manager_json.asp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/asp/upload_json.asp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/jsp/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/jsp/demo.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/jsp/file_manager_json.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/jsp/lib/commons-fileupload-1.2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/jsp/lib/commons-io-1.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/jsp/lib/json_simple-1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/jsp/upload_json.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/kindeditor-all-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/kindeditor-all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/lang/ar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/lang/en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/lang/ko.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/lang/ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/lang/zh-CN.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/lang/zh-TW.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/license.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/php/JSON.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/php/demo.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/php/file_manager_json.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/php/upload_json.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/anchor/anchor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/autoheight/autoheight.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/baidumap/baidumap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/baidumap/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/baidumap/map.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/clearhtml/clearhtml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/code/code.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/code/prettify.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/code/prettify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/emoticons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/10.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/100.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/101.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/102.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/103.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/104.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/105.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/106.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/107.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/108.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/109.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/11.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/110.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/111.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/112.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/113.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/114.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/115.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/116.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/117.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/118.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/119.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/12.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/120.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/121.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/122.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/123.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/124.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/125.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/126.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/127.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/128.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/129.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/13.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/130.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/131.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/132.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/133.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/134.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/14.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/15.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/17.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/18.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/19.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/20.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/21.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/22.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/23.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/24.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/25.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/26.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/27.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/28.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/29.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/30.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/31.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/32.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/33.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/34.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/35.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/36.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/37.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/38.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/39.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/40.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/41.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/42.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/43.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/44.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/45.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/46.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/47.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/48.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/49.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/50.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/51.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/52.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/53.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/54.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/55.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/56.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/57.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/58.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/59.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/60.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/61.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/62.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/63.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/65.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/66.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/67.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/68.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/69.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/70.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/71.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/72.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/73.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/74.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/75.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/76.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/77.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/78.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/79.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/80.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/81.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/82.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/83.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/84.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/85.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/86.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/87.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/88.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/89.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/9.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/90.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/91.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/92.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/93.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/94.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/95.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/96.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/97.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/98.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/99.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/emoticons/images/static.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/filemanager/filemanager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/filemanager/images/file-16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/filemanager/images/file-64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/filemanager/images/folder-16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/filemanager/images/folder-64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/filemanager/images/go-up.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/fixtoolbar/fixtoolbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/flash/flash.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/image/image.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/image/images/align_left.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/image/images/align_right.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/image/images/align_top.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/image/images/refresh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/insertfile/insertfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/lineheight/lineheight.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/link/link.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/map/map.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/map/map.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/media/media.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/multiimage/images/image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/multiimage/images/select-files-en.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/multiimage/images/select-files-zh-CN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/multiimage/images/swfupload.swf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/multiimage/multiimage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/pagebreak/pagebreak.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/plainpaste/plainpaste.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/preview/preview.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/quickformat/quickformat.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/table/table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/template/html/1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/template/html/2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/template/html/3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/template/template.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/plugins/wordpaste/wordpaste.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/themes/common/anchor.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/themes/common/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/themes/common/flash.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/themes/common/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/themes/common/media.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/themes/common/rm.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/themes/default/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/themes/default/default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/themes/default/default.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/themes/qq/editor.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/themes/qq/qq.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/kindeditor/themes/simple/simple.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/getready.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/getready.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cms.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/programs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/programs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../useragent/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../useragent/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../useragent/.idea/useragent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../useragent/.idea/useragent.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ipproxy/.idea/ipproxy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ipproxy/.idea/ipproxy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ipproxy/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ipproxy/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ipproxy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ipproxy/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useragent/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../useragent/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -296,8 +77,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -383,6 +164,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="serial" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="auditbook" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/serialnum" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/serialnum/serial.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="auditbook" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -453,9 +256,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.serial" />
+        <item itemvalue="Python.views" />
         <item itemvalue="Python.tests" />
         <item itemvalue="Python.demo_sms_send" />
-        <item itemvalue="Python.views" />
       </list>
     </recent_temporary>
   </component>
@@ -612,6 +416,27 @@
       <workItem from="1585802651663" duration="105000" />
       <workItem from="1585828796038" duration="2952000" />
       <workItem from="1585841026136" duration="1731000" />
+      <workItem from="1585888324494" duration="210000" />
+      <workItem from="1585928456026" duration="206000" />
+      <workItem from="1586015203226" duration="391000" />
+      <workItem from="1586054664139" duration="1675000" />
+      <workItem from="1586182949701" duration="23000" />
+      <workItem from="1586185087190" duration="540000" />
+      <workItem from="1586187039942" duration="44000" />
+      <workItem from="1586270442682" duration="3953000" />
+      <workItem from="1586274428055" duration="11000" />
+      <workItem from="1586445611259" duration="52000" />
+      <workItem from="1586522803292" duration="38000" />
+      <workItem from="1586523199413" duration="9345000" />
+      <workItem from="1586666572366" duration="11398000" />
+      <workItem from="1586703606698" duration="1474000" />
+      <workItem from="1586705809336" duration="627000" />
+      <workItem from="1586779545349" duration="5412000" />
+      <workItem from="1586873965022" duration="6064000" />
+      <workItem from="1586954252671" duration="9154000" />
+      <workItem from="1587037629876" duration="6958000" />
+      <workItem from="1587045563712" duration="3343000" />
+      <workItem from="1587121561151" duration="2700000" />
     </task>
     <task id="LOCAL-00001" summary="add auditbook project base on django">
       <created>1583854507132</created>
@@ -648,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584860591683</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add auditbook project base on django">
+      <created>1585888355344</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1585888355344</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -693,38 +525,38 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="345" y="148" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.689@0.0.1280.689" timestamp="1584113214121" />
-    <state x="250" y="0" key="CommitChangelistDialog2" timestamp="1584860575118">
+    <state x="250" y="0" key="CommitChangelistDialog2" timestamp="1585888353094">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="250" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1584860575118" />
+    <state x="250" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1585888353094" />
     <state x="121" y="58" width="1024" height="577" key="DiffContextDialog" timestamp="1583936314969">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="121" y="58" width="1024" height="577" key="DiffContextDialog/0.0.1280.689@0.0.1280.689" timestamp="1583936314969" />
-    <state x="421" y="101" key="FileChooserDialogImpl" timestamp="1585835342011">
+    <state x="421" y="101" key="FileChooserDialogImpl" timestamp="1586522839095">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="421" y="101" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1585835342011" />
-    <state x="399" y="225" width="269" height="290" key="Github.ShareDialog" timestamp="1585888344084">
+    <state x="421" y="101" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1586522839095" />
+    <state x="399" y="225" width="269" height="290" key="Github.ShareDialog" timestamp="1587125106869">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="399" y="225" width="269" height="290" key="Github.ShareDialog/0.0.1280.689@0.0.1280.689" timestamp="1585888344084" />
-    <state width="1237" height="198" key="GridCell.Tab.0.bottom" timestamp="1585842757540">
+    <state x="399" y="225" width="269" height="290" key="Github.ShareDialog/0.0.1280.689@0.0.1280.689" timestamp="1587125106869" />
+    <state width="1237" height="137" key="GridCell.Tab.0.bottom" timestamp="1587051175005">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="198" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1585842757540" />
-    <state width="1237" height="198" key="GridCell.Tab.0.center" timestamp="1585842757540">
+    <state width="1237" height="137" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1587051175005" />
+    <state width="1237" height="137" key="GridCell.Tab.0.center" timestamp="1587051175005">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="198" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1585842757540" />
-    <state width="1237" height="198" key="GridCell.Tab.0.left" timestamp="1585842757540">
+    <state width="1237" height="137" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1587051175005" />
+    <state width="1237" height="137" key="GridCell.Tab.0.left" timestamp="1587051175005">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="198" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1585842757540" />
-    <state width="1237" height="198" key="GridCell.Tab.0.right" timestamp="1585842757540">
+    <state width="1237" height="137" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1587051175005" />
+    <state width="1237" height="137" key="GridCell.Tab.0.right" timestamp="1587051175005">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="198" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1585842757540" />
+    <state width="1237" height="137" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1587051175005" />
     <state width="1237" height="198" key="GridCell.Tab.1.bottom" timestamp="1585842757540">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -741,22 +573,22 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="1237" height="198" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1585842757540" />
-    <state x="136" y="0" width="914" height="689" key="SettingsEditor" timestamp="1585835617790">
+    <state x="136" y="0" width="914" height="689" key="SettingsEditor" timestamp="1586959551954">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="136" y="0" width="914" height="689" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1585835617790" />
+    <state x="136" y="0" width="914" height="689" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1586959551954" />
     <state width="631" height="446" key="SwitcherDM" timestamp="1580122224899">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="631" height="446" key="SwitcherDM/0.0.1280.689@0.0.1280.689" timestamp="1580122224899" />
-    <state x="233" y="79" key="Vcs.Push.Dialog.v2" timestamp="1584860635665">
+    <state x="233" y="79" key="Vcs.Push.Dialog.v2" timestamp="1585888427784">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="79" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1584860635665" />
-    <state x="329" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1585888325052">
+    <state x="233" y="79" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1585888427784" />
+    <state x="329" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1587121563250">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="329" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1585888325052" />
+    <state x="329" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1587121563250" />
     <state x="437" y="263" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583936011452">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -769,6 +601,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/auditbook$demo_sms_send.coverage" NAME="demo_sms_send Coverage Results" MODIFIED="1585835118069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dysms_python" />
     <SUITE FILE_PATH="coverage/auditbook$tests.coverage" NAME="tests Coverage Results" MODIFIED="1585841815302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/audit" />
-    <SUITE FILE_PATH="coverage/auditbook$views.coverage" NAME="views Coverage Results" MODIFIED="1585744343528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/audit" />
+    <SUITE FILE_PATH="coverage/auditbook$serial.coverage" NAME="serial Coverage Results" MODIFIED="1586274347502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/serialnum" />
+    <SUITE FILE_PATH="coverage/auditbook$views.coverage" NAME="views Coverage Results" MODIFIED="1586273022268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/audit" />
   </component>
 </project>
