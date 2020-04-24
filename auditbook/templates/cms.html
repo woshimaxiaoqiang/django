@@ -4,6 +4,69 @@
     <meta charset="UTF-8">
     <title>管理员系统</title>
     <link rel="stylesheet" href="/static/bs/bs3.3.7/css/bootstrap.min.css">
+    <style>
+        .table tr td a{
+            text-decoration: none;
+        }
+        body{
+            font: 16px 'Microsoft YaHei UI', sans-serif;
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        .nav-list{
+            width: 180px;
+            border-bottom: 1px solid #cccccc;
+        }
+    .nav-list h3{
+            position: relative;
+            margin: 0;
+            padding: 10px 20px;
+            color: #ffff;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: normal;
+            background-color: #333333;
+            border-top: 1px solid #cccccc;
+            cursor: pointer;
+        }
+        .nav-list h3 span{
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #ac2925;
+            right: 20px;
+            top: 14px;
+            border-radius: 50%;
+        }
+        .nav-list h3.open span{
+            background: #3c763d;
+            border-radius: 50%;
+        }
+        .nav-list h3:hover{
+            background-color: #222222;
+        }
+        .nav-list ul{
+            display: none;
+        }
+        .nav-list li a{
+            display: block;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #cccccc;
+            border-bottom: 0;
+            font-size: 14px;
+        }
+        .nav-list li a:hover{
+            background-color: #cccccc;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -11,7 +74,7 @@
         <table class="table">
             <tr>
                 <td><a href="">人员</a></td>
-                <td><a href="">设备</a></td>
+                <td id="shebei" ><a href="">设备</a></td>
                 <td><a href="">试样</a></td>
                 <td><a href="">方法</a></td>
             </tr>
@@ -22,14 +85,51 @@
             </tr>
         </table>
     </div>
-
+    <div class="nav-list">
+        <h3>选择器<span></span></h3>
+        <ul>
+            <li><a href="#">基本选择器</a></li>
+            <li><a href="#">层级选择器</a></li>
+            <li><a href="#">过滤选择器</a></li>
+            <li><a href="#">属性选择器</a></li>
+            <li><a href="#">内容选择器</a></li>
+            <li><a href="#">子元素选择器</a></li>
+            <li><a href="#">表单选择器</a></li>
+            <li><a href="#">表单对象选择器</a></li>
+        </ul>
+        <h3>筛选 <span></span></h3>
+        <ul>
+            <li><a href="#">过滤</a></li>
+            <li><a href="#">查找</a></li>
+            <li><a href="#">关联</a></li>
+            <li><a href="#">DOM操作</a></li>
+        </ul>
+        <h3>样式 <span></span></h3>
+        <ul>
+            <li><a href="#">CSS操作</a></li>
+            <li><a href="#">位置</a></li>
+            <li><a href="#">尺寸</a></li>
+        </ul>
+        <h3>属性 <span></span></h3>
+        <ul>
+            <li><a href="#">属性操作</a></li>
+            <li><a href="#">CSS类</a></li>
+            <li><a href="#">代码</a></li>
+            <li><a href="#">文本</a></li>
+            <li><a href="#">值</a></li>
+        </ul>
+    </div>
 </div>
 
 
 <script src="/static/bs/bs3.3.7/js/jquery-3.4.1.js"></script>
 <script src="/static/bs/bs3.3.7/js/bootstrap.min.js"></script>
 <script>
-
+    $(document).ready(function () {
+        $(".nav-list h3").click(function () {
+            $(this).toggleClass('open').siblings('h3').removeClass('open').end().next('ul').slideToggle().siblings('ul').slideUp();
+        })
+    })
 </script>
 </body>
 </html>

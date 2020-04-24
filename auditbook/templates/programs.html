@@ -6,6 +6,7 @@
     <style>
         body{
             padding-top: 50px;
+            font: 16px 'Microsoft YaHei UI', sans-serif;
         }
         li:active{
             background-color: lightseagreen;
@@ -13,85 +14,139 @@
         .table-striped>tbody>tr:nth-of-type(odd){
             background-color: lightblue;
         }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navlist{
+            width: 180px;
+            border-bottom: 1px solid #cccccc;
+        }
+        .navlist h4{
+            position: relative;
+            margin: 0;
+            padding: 10px 20px;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: normal;
+            background-color: #333333;
+            border-top: 1px solid #cccccc;
+            cursor: pointer;
+        }
+        .navlist h4 span{
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #ac2925;
+            right: 20px;
+            top: 14px;
+            border-radius: 50%;
+        }
+        .navlist h4.open span{
+            background: #3c763d;
+            border-radius: 50%;
+        }
+        .navlist h4:hover{
+            background-color: #222222;
+        }
+        .navlist ul{
+            display: none;
+        }
+        .navlist li a{
+            display: block;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            font-size: 14px;
+            border-bottom: 0;
+        }
+        .navlist li a:hover{
+            background-color: #cccccc;
+        }
     </style>
     <link rel="stylesheet" href="/static/bs/bs3.3.7/css/bootstrap.min.css">
     <script src="/static/bs/bs3.3.7/js/jquery-3.4.1.js"></script>
     <script src="/static/bs/bs3.3.7/js/bootstrap.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        if(location.hash) {
-            $('a[href=' + location.hash + ']').tab('show');
-        }
-        $(document.body).on("click", "a[data-toggle]", function(event) {
-            location.hash = this.getAttribute("href");
-        });
-    });
-    $(window).on('popstate', function() {
-        var anchor = location.hash || $("a[data-toggle=tab]").first().attr("href");
-        $('a[href=' + anchor + ']').tab('show');
-    });
-</script>
+{#    <script>#}
+{#    $(document).ready(function() {#}
+{#        if(location.hash) {#}
+{#            $('a[href=' + location.hash + ']').tab('show');#}
+{#        }#}
+{#        $(document.body).on("click", "a[data-toggle]", function(event) {#}
+{#            location.hash = this.getAttribute("href");#}
+{#        });#}
+{#    });#}
+{#    $(window).on('popstate', function() {#}
+{#        var anchor = location.hash || $("a[data-toggle=tab]").first().attr("href");#}
+{#        $('a[href=' + anchor + ']').tab('show');#}
+{#    });#}
+{#</script>#}
 </head>
 <body>
-<div class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <a href="" class="navbar-brand">Audit.com</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li><a href="{% url 'index' %}">首页</a></li>
-            <li><a href="{% url 'zhunze' %}">准则/标准</a></li>
-            <li><a href="{% url 'tixi' %}">体系文件</a></li>
-            <li><a href="{% url 'personel' %}">人员/设备</a></li>
-            <li><a href="{% url 'record' %}">历年记录</a></li>
-            <li><a href="{% url 'getready' %}">审核准备</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Hi!&nbsp{{ request.user.username }}</a></li>
-            <li><a href="{% url 'logout' %}">注销</a></li>
-        </ul>
-    </div>
-</div>
-<div class="container">
-    <ul class="col-md-2 nav navbar-default" id="wenjiandaohang">
-        <h3 style="margin-left: 45px">体系文件</h3>
-        <li class="active"><a data-toggle="tab" href="#shouce">质量手册</a></li>
-        <li><a data-toggle="tab" href="#wenjian">程序文件</a></li>
-        <li><a data-toggle="tab" href="#zhidaoshu">三层次文件</a></li>
-        <li><a data-toggle="tab" href="#guanliguiding">技术管理规定</a></li>
+<div class="navlist col-md-2">
+    <h4>文件 <span></span></h4>
+    <ul id="wenjiandaohang">
+        <li><a href="#">质量手册</a></li>
+        <li><a href="#">程序文件</a></li>
+        <li><a href="#">技术管理规定</a></li>
+        <li><a href="#">三层次文件</a></li>
     </ul>
-    <div id="content1" class="col-md-10 tab-content">
-        <div id="shouce" name="shouce" class="tab-pane active">
-            <table class="table table-striped table-hover small">
-                <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
-                    质&nbsp&nbsp&nbsp&nbsp量&nbsp&nbsp&nbsp&nbsp手&nbsp&nbsp&nbsp&nbsp册
-                    <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a>
-                </caption>
-                <thead>
-                    <tr>
-                        <th>序号</th>
-                        <th>手册编号</th>
-                        <th>手册名称</th>
-                        <th>编制者</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody id="text">
-                    {% for shou in shoucecurrent_page %}
-                        <tr style="height: 10px;">
-                            <td>{{ shou.xuhao }}</td>
-                            <td>{{ shou.shouceno }}</td>
-                            <td><a href="/tixi/{{ shou.shouceadd }}">{{ shou.shoucename }}</a></td>
-                            <td>{{ shou.shouceauthor }}</td>
-                            <td class="btn-group">
-                                <a href="/tixi/{{ shou.shouceadd }}" class="btn btn-success btn-xs">查看</a>
-                                <a href="/deleteshouce/{{ shou.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-            <nav aria-label="Page navigation">
+    <h4>标准 <span></span></h4>
+    <ul>
+        <li><a href="#">AC准则</a></li>
+        <li><a href="#">CNAS/DILAC准则</a></li>
+        <li><a href="#">ASTM</a></li>
+        <li><a href="#">国家标准</a></li>
+    </ul>
+    <h4>人员 <span></span></h4>
+    <ul>
+        <li><a href="#">管理人员</a></li>
+        <li><a href="#">QA人员</a></li>
+        <li><a href="#">内审员</a></li>
+        <li><a href="#">授权签字人</a></li>
+        <li><a href="#">技术人员</a></li>
+    </ul>
+    <h4>设备 <span></span></h4>
+    <ul>
+        <li><a href="#">化学专业</a></li>
+        <li><a href="#">机性专业</a></li>
+        <li><a href="#">金相专业</a></li>
+    </ul>
+</div>
+<div id="content1" class="col-md-10 tab-content">
+    <div id="shouce" name="shouce" class="tab-pane active">
+        <table class="table table-striped table-hover small">
+            <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
+                质&nbsp&nbsp&nbsp&nbsp量&nbsp&nbsp&nbsp&nbsp手&nbsp&nbsp&nbsp&nbsp册
+                <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a>
+            </caption>
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>手册编号</th>
+                <th>手册名称</th>
+                <th>编制者</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="text">
+            {% for shou in shoucecurrent_page %}
+                <tr style="height: 10px;">
+                    <td>{{ shou.xuhao }}</td>
+                    <td>{{ shou.shouceno }}</td>
+                    <td><a href="/tixi/{{ shou.shouceadd }}">{{ shou.shoucename }}</a></td>
+                    <td>{{ shou.shouceauthor }}</td>
+                    <td class="btn-group">
+                        <a href="/tixi/{{ shou.shouceadd }}" class="btn btn-success btn-xs">查看</a>
+                        <a href="/deleteshouce/{{ shou.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation">
             <ul class="pagination small">
                 {% if shoucecurrent_page.has_previous %}
                     <li><a href="?page={{ shoucecurrent_num|add:-1 }}" aria-label="Previous">
@@ -113,36 +168,36 @@
                 {% endif %}
             </ul>
         </nav>
-        </div>
-        <div id="wenjian" name="wenjian" class="tab-pane">
-            <table class="table table-striped table-hover small">
-                <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
-                    程&nbsp&nbsp&nbsp&nbsp序&nbsp&nbsp&nbsp&nbsp文&nbsp&nbsp&nbsp&nbsp件
-                    <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
-                <thead>
-                    <tr>
-                        <th>程序编号</th>
-                        <th>程序名称</th>
-                        <th>编制者</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for cheng in chengxucurrent_page %}
-                        <tr>
-                            <td>{{ cheng.shouceno }}</td>
-                            <td><a href="/tixi/{{ cheng.shouceadd }}">{{ cheng.shoucename }}</a></td>
-                            <td>{{ cheng.shouceauthor }}</td>
-                            <td class="btn-group">
-                                <a href="/tixi/{{ cheng.shouceadd }}" class="btn btn-success btn-xs">查看</a>
-                                <a href="/deleteshouce/{{ cheng.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
-                            </td>
-                        </tr>
-                    {% endfor %}
+    </div>
+    <div id="wenjian" name="wenjian" class="tab-pane">
+        <table class="table table-striped table-hover small">
+            <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
+                程&nbsp&nbsp&nbsp&nbsp序&nbsp&nbsp&nbsp&nbsp文&nbsp&nbsp&nbsp&nbsp件
+                <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
+            <thead>
+            <tr>
+                <th>程序编号</th>
+                <th>程序名称</th>
+                <th>编制者</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for cheng in chengxucurrent_page %}
+                <tr>
+                    <td>{{ cheng.shouceno }}</td>
+                    <td><a href="/tixi/{{ cheng.shouceadd }}">{{ cheng.shoucename }}</a></td>
+                    <td>{{ cheng.shouceauthor }}</td>
+                    <td class="btn-group">
+                        <a href="/tixi/{{ cheng.shouceadd }}" class="btn btn-success btn-xs">查看</a>
+                        <a href="/deleteshouce/{{ cheng.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
+                    </td>
+                </tr>
+            {% endfor %}
 
-                </tbody>
-            </table>
-            <nav aria-label="Page navigation">
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation">
             <ul class="pagination small">
                 {% if chengxucurrent_page.has_previous %}
                     <li><a href="?page={{ chengxucurrent_num|add:-1 }}" aria-label="Previous">
@@ -164,67 +219,99 @@
                 {% endif %}
             </ul>
         </nav>
-        </div>
-        <div id="zhidaoshu" name="zhidaoshu" class="tab-pane">
-            <table class="table table-striped table-hover small">
-                <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
-                    三&nbsp&nbsp&nbsp&nbsp层&nbsp&nbsp&nbsp&nbsp次&nbsp&nbsp&nbsp&nbsp文&nbsp&nbsp&nbsp&nbsp件
-                    <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 300px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
-                <thead>
-                    <tr>
-                        <th>文件编号</th>
-                        <th>文件名称</th>
-                        <th>编制者</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for thi in third %}
-                        <tr>
-                            <td>{{ thi.shouceno }}</td>
-                            <td><a href="/tixi/{{ thi.shouceadd }}">{{ thi.shoucename }}</a></td>
-                            <td>{{ thi.shouceauthor }}</td>
-                            <td class="btn-group">
-                                <a href="/tixi/{{ thi.shouceadd }}" class="btn btn-success btn-xs">查看</a>
-                                <a href="/deleteshouce/{{ thi.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
-                            </td>
-                        </tr>
-                    {% endfor %}
+    </div>
+    <div id="zhidaoshu" name="zhidaoshu" class="tab-pane">
+        <table class="table table-striped table-hover small">
+            <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
+                三&nbsp&nbsp&nbsp&nbsp层&nbsp&nbsp&nbsp&nbsp次&nbsp&nbsp&nbsp&nbsp文&nbsp&nbsp&nbsp&nbsp件
+                <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 300px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
+            <thead>
+            <tr>
+                <th>文件编号</th>
+                <th>文件名称</th>
+                <th>编制者</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for thi in third %}
+                <tr>
+                    <td>{{ thi.shouceno }}</td>
+                    <td><a href="/tixi/{{ thi.shouceadd }}">{{ thi.shoucename }}</a></td>
+                    <td>{{ thi.shouceauthor }}</td>
+                    <td class="btn-group">
+                        <a href="/tixi/{{ thi.shouceadd }}" class="btn btn-success btn-xs">查看</a>
+                        <a href="/deleteshouce/{{ thi.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
+                    </td>
+                </tr>
+            {% endfor %}
 
-                </tbody>
-            </table>
-        </div>
-        <div id="guanliguiding" name="guanliguiding" class="tab-pane">
-            <table class="table table-striped table-hover small">
-                <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
-                    技&nbsp&nbsp&nbsp&nbsp术&nbsp&nbsp&nbsp&nbsp管&nbsp&nbsp&nbsp&nbsp理&nbsp&nbsp&nbsp&nbsp规&nbsp&nbsp&nbsp&nbsp定
-                    <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 280px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
-                <thead>
-                    <tr>
-                        <th>文件编号</th>
-                        <th>文件名称</th>
-                        <th>编制者</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for jishu in jishuguanli %}
-                        <tr>
-                            <td>{{ jishu.shouceno }}</td>
-                            <td><a href="/tixi/{{ jishu.shouceadd }}">{{ jishu.shoucename }}</a></td>
-                            <td>{{ jishu.shouceauthor }}</td>
-                            <td class="btn-group">
-                                <a href="/tixi/{{ jishu.shouceadd }}" class="btn btn-success btn-xs">查看</a>
-                                <a href="/deleteshouce/{{ jishu.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
-                            </td>
-                        </tr>
-                    {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div id="guanliguiding" name="guanliguiding" class="tab-pane">
+        <table class="table table-striped table-hover small">
+            <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
+                技&nbsp&nbsp&nbsp&nbsp术&nbsp&nbsp&nbsp&nbsp管&nbsp&nbsp&nbsp&nbsp理&nbsp&nbsp&nbsp&nbsp规&nbsp&nbsp&nbsp&nbsp定
+                <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 280px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
+            <thead>
+            <tr>
+                <th>文件编号</th>
+                <th>文件名称</th>
+                <th>编制者</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for jishu in jishuguanli %}
+                <tr>
+                    <td>{{ jishu.shouceno }}</td>
+                    <td><a href="/tixi/{{ jishu.shouceadd }}">{{ jishu.shoucename }}</a></td>
+                    <td>{{ jishu.shouceauthor }}</td>
+                    <td class="btn-group">
+                        <a href="/tixi/{{ jishu.shouceadd }}" class="btn btn-success btn-xs">查看</a>
+                        <a href="/deleteshouce/{{ jishu.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
+                    </td>
+                </tr>
+            {% endfor %}
 
-                </tbody>
-            </table>
+            </tbody>
+        </table>
+    </div>
+    {#    <ul class="col-md-2 nav navbar-default" id="wenjiandaohang">#}
+    {#        <h3 id="wenjiandao" style="margin-left: 45px">体系文件</h3>#}
+    {#        <li class="active"><a data-toggle="tab" href="#shouce">质量手册</a></li>#}
+    {#        <li><a data-toggle="tab" href="#wenjian">程序文件</a></li>#}
+    {#        <li><a data-toggle="tab" href="#zhidaoshu">三层次文件</a></li>#}
+    {#        <li><a data-toggle="tab" href="#guanliguiding">技术管理规定</a></li>#}
+    {#    </ul>#}
+</div>
+
+
+
+
+
+
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand">Audit.com</a>
         </div>
+        <ul class="nav navbar-nav">
+            <li><a href="{% url 'index' %}">首页</a></li>
+            <li><a href="{% url 'zhunze' %}">准则/标准</a></li>
+            <li><a href="{% url 'tixi' %}">体系文件</a></li>
+            <li><a href="{% url 'personel' %}">人员/设备</a></li>
+            <li><a href="{% url 'record' %}">历年记录</a></li>
+            <li><a href="{% url 'getready' %}">审核准备</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Hi!&nbsp{{ request.user.username }}</a></li>
+            <li><a href="{% url 'logout' %}">注销</a></li>
+        </ul>
     </div>
 </div>
+
 <h3>Ajax练习</h3>
 <button class="ajax">Ajax</button>
 <p class="tex"></p>
@@ -249,23 +336,23 @@
 
 </script>
 
-{#<script>#}
-{#    var wenjian = document.getElementById('wenjiandaohang');#}
-{#    var li = wenjian.getElementsByTagName('li');#}
-{#    var content = document.getElementById('content1');#}
-{#    var p = content.getElementsByTagName('div');#}
-{#    for (var i=0;i<li.length;i++){#}
-{#        li[i].setAttribute('a',i);#}
-{#        li[i].onclick=function () {#}
-{#            var a = this.getAttribute('a');#}
-{#            this.class='active';#}
-{#            for (var j=0;j<p.length;j++){#}
-{#                p[j].style.display='none';#}
-{#            }#}
-{#            p[a].style.display='block';#}
-{#        }#}
-{#    }#}
-{#</script>#}
+<script>
+    var wenjian = document.getElementById('wenjiandaohang');
+    var li = wenjian.getElementsByTagName('li');
+    var content = document.getElementById('content1');
+    var p = content.getElementsByTagName('div');
+    for (var i=0;i<li.length;i++){
+        li[i].setAttribute('a',i);
+        li[i].onclick=function () {
+            var a = this.getAttribute('a');
+            this.class='active';
+            for (var j=0;j<p.length;j++){
+                p[j].style.display='none';
+            }
+            p[a].style.display='block';
+        }
+    }
+</script>
 <script>
     function shanchu() {
         var shan = confirm('确定删除？');
@@ -276,6 +363,11 @@
             window.event.returnValue = false;
         }
     }
+    $(document).ready(function () {
+        $('.navlist h4').click(function () {
+            $(this).toggleClass('open').siblings('h4').removeClass('open').end().next('ul').slideToggle().siblings('ul').slideUp();
+        })
+    })
 </script>
 
 </body>
