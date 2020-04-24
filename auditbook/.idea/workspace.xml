@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a677f81-3257-49e9-8a4b-27d48c84517a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/o.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cms.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/programs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/programs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ipproxy/.idea/ipproxy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ipproxy/.idea/ipproxy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ipproxy/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ipproxy/.idea/misc.xml" afterDir="false" />
@@ -434,6 +431,7 @@
       <workItem from="1587566502250" duration="3131000" />
       <workItem from="1587646735495" duration="6042000" />
       <workItem from="1587729124612" duration="6578000" />
+      <workItem from="1587736182589" duration="2852000" />
     </task>
     <task id="LOCAL-00001" summary="add auditbook project base on django">
       <created>1583854507132</created>

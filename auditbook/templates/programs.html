@@ -69,32 +69,19 @@
     <link rel="stylesheet" href="/static/bs/bs3.3.7/css/bootstrap.min.css">
     <script src="/static/bs/bs3.3.7/js/jquery-3.4.1.js"></script>
     <script src="/static/bs/bs3.3.7/js/bootstrap.min.js"></script>
-{#    <script>#}
-{#    $(document).ready(function() {#}
-{#        if(location.hash) {#}
-{#            $('a[href=' + location.hash + ']').tab('show');#}
-{#        }#}
-{#        $(document.body).on("click", "a[data-toggle]", function(event) {#}
-{#            location.hash = this.getAttribute("href");#}
-{#        });#}
-{#    });#}
-{#    $(window).on('popstate', function() {#}
-{#        var anchor = location.hash || $("a[data-toggle=tab]").first().attr("href");#}
-{#        $('a[href=' + anchor + ']').tab('show');#}
-{#    });#}
-{#</script>#}
+
 </head>
 <body>
 <div class="navlist col-md-2">
     <h4>文件 <span></span></h4>
-    <ul id="wenjiandaohang">
+    <ul id="tixi">
         <li><a href="#">质量手册</a></li>
         <li><a href="#">程序文件</a></li>
-        <li><a href="#">技术管理规定</a></li>
         <li><a href="#">三层次文件</a></li>
+        <li><a href="#">技术管理规定</a></li>
     </ul>
     <h4>标准 <span></span></h4>
-    <ul>
+    <ul id="stanards">
         <li><a href="#">AC准则</a></li>
         <li><a href="#">CNAS/DILAC准则</a></li>
         <li><a href="#">ASTM</a></li>
@@ -287,6 +274,116 @@
     {#    </ul>#}
 </div>
 
+<div id="content2" class="col-md-10" style="display: none">
+        <div style="display: block">
+            <table class="table table-striped table-hover small">
+                <caption style="text-align: right;font-size: 20px;background-color:darkblue;color: white;height: 40px">
+                    A&nbsp&nbsp&nbsp&nbspC&nbsp&nbsp&nbsp&nbsp准&nbsp&nbsp&nbsp&nbsp则
+                    <a href="{% url 'uploadstd' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a>
+                </caption>
+                <thead>
+                    <tr>
+                        <th>AC编号</th>
+                        <th>AC名称</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="text">
+                    {% for a in ac %}
+                        <tr>
+                            <td>{{ a.stdno }}</td>
+                            <td><a href="/zhunze/{{ a.stdadd }}">{{ a.stdname }}</a></td>
+                            <td class="btn-group right">
+                                <a href="/zhunze/{{ a.stdadd }}" class="btn btn-success btn-xs">查看</a>
+                                <a href="/deletestd/{{ a.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <table class="table table-striped table-hover small">
+                <caption style="text-align: right;font-size: 20px;background-color:darkblue;color: white;height: 40px">
+                    CNAS/DILAC&nbsp&nbsp&nbsp&nbsp准则
+                <a href="{% url 'uploadstd' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
+                <thead>
+                    <tr>
+                        <th>CL编号</th>
+                        <th>CL名称</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cna in cnas %}
+                        <tr>
+                            <td>{{ cna.stdno }}</td>
+                            <td><a href="/zhunze/{{ cna.stdadd }}">{{ cna.stdname }}</a></td>
+                            <td class="btn-group">
+                                <a href="/zhunze/{{ cna.stdadd }}" class="btn btn-success btn-xs">查看</a>
+                                <a href="/deletestd/{{ cna.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <table class="table table-striped table-hover small">
+                <caption style="text-align: right;font-size: 20px;background-color:darkblue;color: white;height: 40px">
+                    ASTM
+                <a href="{% url 'uploadstd' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
+                <thead>
+                    <tr>
+                        <th>ASTM编号</th>
+                        <th>ASTM名称</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ast in astm %}
+                        <tr>
+                            <td>{{ ast.stdno }}</td>
+                            <td><a href="/zhunze/{{ ast.stdadd }}">{{ ast.stdname }}</a></td>
+                            <td class="btn btn-group">
+                                <a href="/zhunze/{{ ast.stdadd }}" class="btn btn-success btn-xs">查看</a>
+                                <a href="/deletestd/{{ ast.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <table class="table table-striped table-hover small">
+                <caption style="text-align: right;font-size: 20px;background-color:darkblue;color: white;height: 40px">
+                    国&nbsp&nbsp&nbsp&nbsp家&nbsp&nbsp&nbsp&nbsp标&nbsp&nbsp&nbsp&nbsp准
+                <a href="{% url 'uploadstd' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
+                <thead>
+                    <tr>
+                        <th>标准编号</th>
+                        <th>标准名称</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for g in gb %}
+                        <tr>
+                            <td>{{ g.stdno }}</td>
+                            <td><a href="/zhunze/{{ g.stdadd }}">{{ g.stdname }}</a></td>
+                            <td class="btn-group">
+                                <a href="/zhunze/{{ g.stdadd }}" class="btn btn-success btn-xs">查看</a>
+                                <a href="/deletestd/{{ g.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 
 
@@ -336,23 +433,7 @@
 
 </script>
 
-<script>
-    var wenjian = document.getElementById('wenjiandaohang');
-    var li = wenjian.getElementsByTagName('li');
-    var content = document.getElementById('content1');
-    var p = content.getElementsByTagName('div');
-    for (var i=0;i<li.length;i++){
-        li[i].setAttribute('a',i);
-        li[i].onclick=function () {
-            var a = this.getAttribute('a');
-            this.class='active';
-            for (var j=0;j<p.length;j++){
-                p[j].style.display='none';
-            }
-            p[a].style.display='block';
-        }
-    }
-</script>
+
 <script>
     function shanchu() {
         var shan = confirm('确定删除？');
@@ -367,8 +448,81 @@
         $('.navlist h4').click(function () {
             $(this).toggleClass('open').siblings('h4').removeClass('open').end().next('ul').slideToggle().siblings('ul').slideUp();
         })
+        $("#tixi li").click(function () {
+            $("#content1").show();
+            $("#content2").hide();
+        })
+        $("#stanards li").click(function () {
+            $("#content2").show();
+            $("#content1").hide();
+        })
     })
+    var stanards = document.getElementById('stanards');
+    var li1 = stanards.getElementsByTagName('li');
+    var content2 = document.getElementById('content2');
+    var p1 = content2.getElementsByTagName('div');
+    for (var i=0;i<li1.length;i++){
+        li1[i].setAttribute('a',i);
+        li1[i].onclick=function () {
+            var a = this.getAttribute('a');
+            this.className='active';
+            for (var j=0;j<p1.length;j++){
+                p1[j].style.display='none';
+            }
+            p1[a].style.display='block';
+        }
+    }
+    var tixi = document.getElementById('tixi');
+    var li2 = tixi.getElementsByTagName('li');
+    var content1 = document.getElementById('content1');
+    var p2 = content1.getElementsByTagName('div');
+    for (var i=0;i<li2.length;i++){
+        li2[i].setAttribute('a',i);
+        li2[i].onclick=function () {
+            var a = this.getAttribute('a');
+            this.class='active';
+            for (var j=0;j<p2.length;j++){
+                p2[j].style.display='none';
+            }
+            p2[a].style.display='block';
+        }
+    }
 </script>
+{#<script>#}
+{#    var wenjian = document.getElementById('stanards');#}
+{#    var li = wenjian.getElementsByTagName('li');#}
+{#    var content = document.getElementById('content2');#}
+{#    var p = content.getElementsByTagName('div');#}
+{#    for (var i=0;i<li.length;i++){#}
+{#        li[i].setAttribute('a',i);#}
+{#        li[i].onclick=function () {#}
+{#            var a = this.getAttribute('a');#}
+{#            this.className='active';#}
+{#            for (var j=0;j<p.length;j++){#}
+{#                p[j].style.display='none';#}
+{#            }#}
+{#            p[a].style.display='block';#}
+{#        }#}
+{#    }#}
+{#</script>#}
+{#<script>#}
+{#    var wenjian = document.getElementById('tixi');#}
+{#    var li = wenjian.getElementsByTagName('li');#}
+{#    var content = document.getElementById('content1');#}
+{#    var p = content.getElementsByTagName('div');#}
+{#    for (var i=0;i<li.length;i++){#}
+{#        li[i].setAttribute('a',i);#}
+{#        li[i].onclick=function () {#}
+{#            var a = this.getAttribute('a');#}
+{#            this.class='active';#}
+{#            for (var j=0;j<p.length;j++){#}
+{#                p[j].style.display='none';#}
+{#            }#}
+{#            p[a].style.display='block';#}
+{#        }#}
+{#    }#}
+{#</script>#}
+
 
 </body>
 </html>
