@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2a677f81-3257-49e9-8a4b-27d48c84517a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cms.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/programs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/programs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ipproxy/.idea/ipproxy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ipproxy/.idea/ipproxy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ipproxy/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ipproxy/.idea/misc.xml" afterDir="false" />
@@ -431,7 +433,7 @@
       <workItem from="1587566502250" duration="3131000" />
       <workItem from="1587646735495" duration="6042000" />
       <workItem from="1587729124612" duration="6578000" />
-      <workItem from="1587736182589" duration="2852000" />
+      <workItem from="1587736182589" duration="5012000" />
     </task>
     <task id="LOCAL-00001" summary="add auditbook project base on django">
       <created>1583854507132</created>
@@ -482,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587125484550</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add auditbook project base on django">
+      <created>1587739062079</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587739062079</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,10 +536,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="345" y="148" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.689@0.0.1280.689" timestamp="1584113214121" />
-    <state x="250" y="0" key="CommitChangelistDialog2" timestamp="1587125481927">
+    <state x="250" y="0" key="CommitChangelistDialog2" timestamp="1587739061320">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="250" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1587125481927" />
+    <state x="250" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1587739061320" />
     <state x="121" y="58" width="1024" height="577" key="DiffContextDialog" timestamp="1587125576306">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -543,22 +552,22 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="399" y="225" width="269" height="290" key="Github.ShareDialog/0.0.1280.689@0.0.1280.689" timestamp="1587125106869" />
-    <state width="1237" height="137" key="GridCell.Tab.0.bottom" timestamp="1587735565527">
+    <state width="1237" height="107" key="GridCell.Tab.0.bottom" timestamp="1587742972543">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="137" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1587735565527" />
-    <state width="1237" height="137" key="GridCell.Tab.0.center" timestamp="1587735565527">
+    <state width="1237" height="107" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1587742972543" />
+    <state width="1237" height="107" key="GridCell.Tab.0.center" timestamp="1587742972543">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="137" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1587735565527" />
-    <state width="1237" height="137" key="GridCell.Tab.0.left" timestamp="1587735565527">
+    <state width="1237" height="107" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1587742972543" />
+    <state width="1237" height="107" key="GridCell.Tab.0.left" timestamp="1587742972543">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="137" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1587735565527" />
-    <state width="1237" height="137" key="GridCell.Tab.0.right" timestamp="1587735565527">
+    <state width="1237" height="107" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1587742972543" />
+    <state width="1237" height="107" key="GridCell.Tab.0.right" timestamp="1587742972543">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="137" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1587735565527" />
+    <state width="1237" height="107" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1587742972543" />
     <state width="1237" height="198" key="GridCell.Tab.1.bottom" timestamp="1585842757540">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -583,10 +592,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="631" height="446" key="SwitcherDM/0.0.1280.689@0.0.1280.689" timestamp="1587263107206" />
-    <state x="233" y="79" key="Vcs.Push.Dialog.v2" timestamp="1587125522601">
+    <state x="233" y="79" key="Vcs.Push.Dialog.v2" timestamp="1587742094134">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="79" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1587125522601" />
+    <state x="233" y="79" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1587742094134" />
     <state x="329" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1587729128064">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -595,6 +604,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="437" y="263" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689" timestamp="1583936011452" />
+    <state x="407" y="58" key="git4idea.branch.GitSmartOperationDialog" timestamp="1587742014686">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="407" y="58" key="git4idea.branch.GitSmartOperationDialog/0.0.1280.689@0.0.1280.689" timestamp="1587742014686" />
     <state x="297" y="-1" width="672" height="676" key="search.everywhere.popup" timestamp="1585064359928">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
