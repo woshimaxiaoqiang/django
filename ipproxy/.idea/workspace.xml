@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="371cb922-1078-436f-b314-dd1cc3f37cee" name="Default Changelist" comment="" />
+    <list default="true" id="371cb922-1078-436f-b314-dd1cc3f37cee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../auditbook/.idea/auditbook.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../auditbook/.idea/auditbook.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auditbook/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../auditbook/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auditbook/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../auditbook/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auditbook/audit/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../auditbook/audit/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auditbook/templates/cms.html" beforeDir="false" afterPath="$PROJECT_DIR$/../auditbook/templates/cms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ipproxy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ipproxy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../useragent/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../useragent/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +24,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1XeJ7UU8NV6dEc5mx7GmrS0Y7Eh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -23,7 +37,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../auditbook" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../useragent" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.selenium_ch1">
@@ -111,6 +125,8 @@
       <workItem from="1582336959628" duration="43000" />
       <workItem from="1582337087894" duration="19000" />
       <workItem from="1582337221394" duration="13000" />
+      <workItem from="1586187213792" duration="43000" />
+      <workItem from="1586270316653" duration="101000" />
     </task>
     <servers />
   </component>
@@ -118,34 +134,38 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="101" key="FileChooserDialogImpl" timestamp="1582337233072">
+    <state x="96" y="1" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586187234369">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="421" y="101" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1582337233072" />
-    <state width="1237" height="152" key="GridCell.Tab.0.bottom" timestamp="1581505752562">
+    <state x="96" y="1" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1586187234369" />
+    <state x="421" y="101" key="FileChooserDialogImpl" timestamp="1586270415873">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="152" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1581505752562" />
-    <state width="1237" height="152" key="GridCell.Tab.0.center" timestamp="1581505752562">
+    <state x="421" y="101" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1586270415873" />
+    <state width="1237" height="152" key="GridCell.Tab.0.bottom" timestamp="1586187255934">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="152" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1581505752562" />
-    <state width="1237" height="152" key="GridCell.Tab.0.left" timestamp="1581505752561">
+    <state width="1237" height="152" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1586187255934" />
+    <state width="1237" height="152" key="GridCell.Tab.0.center" timestamp="1586187255934">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="152" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1581505752561" />
-    <state width="1237" height="152" key="GridCell.Tab.0.right" timestamp="1581505752562">
+    <state width="1237" height="152" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1586187255934" />
+    <state width="1237" height="152" key="GridCell.Tab.0.left" timestamp="1586187255934">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="152" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1581505752562" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1581480675550">
+    <state width="1237" height="152" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1586187255934" />
+    <state width="1237" height="152" key="GridCell.Tab.0.right" timestamp="1586187255934">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1581480675550" />
-    <state x="325" y="170" key="com.intellij.ide.util.TipDialog" timestamp="1582337226988">
+    <state width="1237" height="152" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1586187255934" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1586187242313">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="325" y="170" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1582337226988" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1586187242313" />
+    <state x="325" y="170" key="com.intellij.ide.util.TipDialog" timestamp="1586270400550">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="325" y="170" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1586270400550" />
     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1581480816711">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -153,6 +173,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ipproxy$start.coverage" NAME="start Coverage Results" MODIFIED="1581402454536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ipproxy" />
-    <SUITE FILE_PATH="coverage/ipproxy$selenium_ch1.coverage" NAME="selenium_ch1 Coverage Results" MODIFIED="1581482656213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/selenium" />
+    <SUITE FILE_PATH="coverage/ipproxy$selenium_ch1.coverage" NAME="selenium_ch1 Coverage Results" MODIFIED="1586187245539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/selenium" />
   </component>
 </project>
