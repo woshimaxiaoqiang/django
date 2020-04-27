@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2a677f81-3257-49e9-8a4b-27d48c84517a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ipproxy/.idea/ipproxy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ipproxy/.idea/ipproxy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ipproxy/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ipproxy/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ipproxy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ipproxy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../useragent/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../useragent/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -432,6 +428,9 @@
       <workItem from="1587729124612" duration="6578000" />
       <workItem from="1587736182589" duration="5969000" />
       <workItem from="1587821703891" duration="1343000" />
+      <workItem from="1587823597409" duration="231000" />
+      <workItem from="1587823845302" duration="964000" />
+      <workItem from="1587908409572" duration="41000" />
     </task>
     <task id="LOCAL-00001" summary="add auditbook project base on django">
       <created>1583854507132</created>
@@ -620,10 +619,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="1237" height="198" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1585842757540" />
-    <state x="136" y="0" width="914" height="689" key="SettingsEditor" timestamp="1587743186597">
+    <state x="136" y="0" width="914" height="689" key="SettingsEditor" timestamp="1587824805633">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="136" y="0" width="914" height="689" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1587743186597" />
+    <state x="136" y="0" width="914" height="689" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1587824805633" />
     <state width="631" height="446" key="SwitcherDM" timestamp="1587263107206">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -632,10 +631,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="233" y="79" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1587743040379" />
-    <state x="329" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1587821731448">
+    <state x="329" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1587908415487">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="329" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1587821731448" />
+    <state x="329" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1587908415487" />
     <state x="437" y="263" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583936011452">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
