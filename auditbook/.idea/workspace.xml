@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a677f81-3257-49e9-8a4b-27d48c84517a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/media/shouce/hello_bwgA3fp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/shouce/lena_BRwu0fC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/standard/python.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/standard/python_fOQsUom.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/jilu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/jilus.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/o.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/getready.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/getready.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/personel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/programs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/programs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/record.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/record.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/records.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/records.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/standard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/baogao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scrapy1/scrapy1/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../scrapy1/scrapy1/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scrapy1/scrapy1/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../scrapy1/scrapy1/pipelines.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +71,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -101,7 +120,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -431,6 +450,20 @@
       <workItem from="1587823597409" duration="231000" />
       <workItem from="1587823845302" duration="964000" />
       <workItem from="1587908409572" duration="41000" />
+      <workItem from="1588079943398" duration="633000" />
+      <workItem from="1588081112289" duration="2004000" />
+      <workItem from="1588083153776" duration="5976000" />
+      <workItem from="1588164796249" duration="8860000" />
+      <workItem from="1588173884110" duration="214000" />
+      <workItem from="1588382345881" duration="10913000" />
+      <workItem from="1588424593964" duration="540000" />
+      <workItem from="1588512830157" duration="301000" />
+      <workItem from="1588859125306" duration="2943000" />
+      <workItem from="1588948140620" duration="2374000" />
+      <workItem from="1589024374624" duration="10826000" />
+      <workItem from="1589204749096" duration="496000" />
+      <workItem from="1589205267151" duration="42000" />
+      <workItem from="1589205596839" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="add auditbook project base on django">
       <created>1583854507132</created>
@@ -559,10 +592,6 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="233" y="4" key="#Notifications/0.0.1280.689@0.0.1280.689" timestamp="1583933358736" />
-    <state x="350" y="0" width="594" height="689" key="#auditbook" timestamp="1579675605187">
-      <screen x="0" y="0" width="1280" height="689" />
-    </state>
-    <state x="350" y="0" width="594" height="689" key="#auditbook/0.0.1280.689@0.0.1280.689" timestamp="1579675605187" />
     <state x="191" y="1" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584540935202">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -579,30 +608,30 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="121" y="58" width="1024" height="577" key="DiffContextDialog/0.0.1280.689@0.0.1280.689" timestamp="1587125576306" />
-    <state x="421" y="101" key="FileChooserDialogImpl" timestamp="1587125554120">
+    <state x="421" y="101" key="FileChooserDialogImpl" timestamp="1589205605129">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="421" y="101" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1587125554120" />
+    <state x="421" y="101" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1589205605129" />
     <state x="399" y="225" width="269" height="290" key="Github.ShareDialog" timestamp="1587125106869">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="399" y="225" width="269" height="290" key="Github.ShareDialog/0.0.1280.689@0.0.1280.689" timestamp="1587125106869" />
-    <state width="1237" height="107" key="GridCell.Tab.0.bottom" timestamp="1587743957877">
+    <state width="1237" height="144" key="GridCell.Tab.0.bottom" timestamp="1589205244894">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="107" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1587743957877" />
-    <state width="1237" height="107" key="GridCell.Tab.0.center" timestamp="1587743957877">
+    <state width="1237" height="144" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1589205244894" />
+    <state width="1237" height="144" key="GridCell.Tab.0.center" timestamp="1589205244894">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="107" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1587743957877" />
-    <state width="1237" height="107" key="GridCell.Tab.0.left" timestamp="1587743957876">
+    <state width="1237" height="144" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1589205244894" />
+    <state width="1237" height="144" key="GridCell.Tab.0.left" timestamp="1589205244894">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="107" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1587743957876" />
-    <state width="1237" height="107" key="GridCell.Tab.0.right" timestamp="1587743957877">
+    <state width="1237" height="144" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1589205244894" />
+    <state width="1237" height="144" key="GridCell.Tab.0.right" timestamp="1589205244894">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="107" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1587743957877" />
+    <state width="1237" height="144" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1589205244894" />
     <state width="1237" height="198" key="GridCell.Tab.1.bottom" timestamp="1585842757540">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -619,22 +648,22 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="1237" height="198" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1585842757540" />
-    <state x="136" y="0" width="914" height="689" key="SettingsEditor" timestamp="1587824805633">
+    <state x="136" y="0" width="914" height="689" key="SettingsEditor" timestamp="1588079959951">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="136" y="0" width="914" height="689" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1587824805633" />
-    <state width="631" height="446" key="SwitcherDM" timestamp="1587263107206">
+    <state x="136" y="0" width="914" height="689" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1588079959951" />
+    <state width="631" height="446" key="SwitcherDM" timestamp="1588087695244">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="631" height="446" key="SwitcherDM/0.0.1280.689@0.0.1280.689" timestamp="1587263107206" />
+    <state width="631" height="446" key="SwitcherDM/0.0.1280.689@0.0.1280.689" timestamp="1588087695244" />
     <state x="233" y="79" key="Vcs.Push.Dialog.v2" timestamp="1587743040379">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="233" y="79" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1587743040379" />
-    <state x="329" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1587908415487">
+    <state x="329" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1589205599224">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="329" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1587908415487" />
+    <state x="329" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1589205599224" />
     <state x="437" y="263" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583936011452">
       <screen x="0" y="0" width="1280" height="689" />
     </state>

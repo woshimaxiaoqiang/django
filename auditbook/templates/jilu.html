@@ -1,0 +1,140 @@
+<title>实验室记录</title>
+{% extends 'base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/bs/bs3.3.7/css/bootstrap.min.css">
+    <style>
+        body{
+            margin-top: 60px;
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navlist{
+            width: 180px;
+            border-bottom: 1px solid #cccccc;
+        }
+        .navlist h4{
+            position: relative;
+            margin: 0;
+            padding: 10px 20px;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: normal;
+            background-color: #333333;
+            border-top: 1px solid #cccccc;
+            cursor: pointer;
+        }
+        .navlist h4 span{
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #ac2925;
+            right: 20px;
+            top: 14px;
+            border-radius: 50%;
+        }
+        .navlist h4.open span{
+            background: #3c763d;
+            border-radius: 50%;
+        }
+        .navlist h4:hover{
+            background-color: #222222;
+        }
+        .navlist ul{
+            display: none;
+        }
+        .navlist li a{
+            display: block;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            font-size: 14px;
+            border-bottom: 0;
+        }
+        .navlist li a:hover{
+            background-color: #cccccc;
+        }
+    </style>
+{% endblock %}
+
+
+{% block shouye %}
+<div class="container">
+    <div class="navlist col-md-2" style="border-bottom: 0">
+        <h4>质&nbsp量&nbsp记&nbsp录 <span></span></h4>
+        <ul id="zhiliang">
+            {% for date in dates %}
+                <li><a href="/jilu/{{ date.tab_times }}">{{ date.tab_times }} 年</a></li>
+            {% endfor %}
+        </ul>
+        <h4>技&nbsp术&nbsp记&nbsp录 <span></span></h4>
+        <ul id="jishu">
+            {% for date in dates %}
+                <li><a href="/jilu/{{ date.tab_times }}">{{ date.tab_times }} 年</a></li>
+            {% endfor %}
+        </ul>
+        <h4>内&nbsp审&nbsp记&nbsp录 <span></span></h4>
+        <ul id="neishen">
+            {% for date in dates %}
+                <li><a href="/jilu/{{ date.tab_times }}">{{ date.tab_times }} 年</a></li>
+            {% endfor %}
+        </ul>
+        <h4>整&nbsp改&nbsp记&nbsp录 <span></span></h4>
+        <ul id="ncr">
+            {% for date in dates %}
+                <li><a href="/jilu/{{ date.tab_times }}">{{ date.tab_times }} 年</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-md-10 tab-content" id="content1">1
+
+    </div>
+    <div class="col-md-10 tab-content" id="content2" style="display: none">2
+
+    </div>
+    <div class="col-md-10 tab-content" id="content3" style="display: none">3
+
+    </div>
+    <div class="col-md-10 tab-content" id="content4" style="display: none">4
+
+    </div>
+</div>
+{% endblock %}
+
+
+{% block js %}
+    <script>
+        $(document).ready(function () {
+            $('.navlist h4').click(function () {
+                $(this).toggleClass('open').siblings('h4').removeClass('open').end().next('ul').slideToggle().siblings('ul').slideUp();
+            });
+            $("#zhiliang li").click(function () {
+                $("#content1").show();
+                $("#content2").hide();
+                $("#content3").hide();
+                $("#content4").hide();
+            });
+            $("#jishu li").click(function () {
+                $("#content2").show();
+                $("#content1").hide();
+                $("#content3").hide();
+                $("#content4").hide();
+            });
+            $("#neishen li").click(function () {
+                $("#content3").show();
+                $("#content1").hide();
+                $("#content2").hide();
+                $("#content4").hide();
+            });
+            $("#ncr li").click(function () {
+                $("#content4").show();
+                $("#content1").hide();
+                $("#content2").hide();
+                $("#content3").hide();
+            });
+        });
+    </script>
+{% endblock %}

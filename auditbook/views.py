@@ -57,7 +57,7 @@ def zhunze(request):
     cnas = Stardands.objects.filter(stdclass__icontains='CNAS').order_by('stdno')
     astm = Stardands.objects.filter(stdclass__icontains='ASTM').order_by('stdno')
     gb = Stardands.objects.filter(stdclass__icontains='GB').order_by('stdno')
-    return render(request,'standard.html',locals())
+    return render(request, 'baogao.html', locals())
 
 def tixi(request):
     shouce = Zhiliangshouce.objects.filter(fileclass__icontains='质量手册').order_by('shouceno')
@@ -95,7 +95,7 @@ def personel(request):
     jinxequip = Equip.objects.filter(equipfield__icontains='金相').order_by('equipname')
     jilequip = Equip.objects.filter(equipfield__icontains='计量').order_by('equipname')
     elseequip = Equip.objects.filter(equipfield__icontains='其他').order_by('equipname')
-    return render(request,'personel.html',locals())
+    return render(request, 'jilus.html', locals())
 
 
 def record(request):

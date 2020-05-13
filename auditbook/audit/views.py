@@ -73,9 +73,29 @@ def zhunze(request):
     cnas = Stardands.objects.filter(stdclass__icontains='CNAS').order_by('stdno')
     astm = Stardands.objects.filter(stdclass__icontains='ASTM').order_by('stdno')
     gb = Stardands.objects.filter(stdclass__icontains='GB').order_by('stdno')
-    return render(request,'standard.html',locals())
+    return render(request, 'baogao.html', locals())
 
 def tixi(request):
+    ac = Stardands.objects.filter(stdclass__icontains='AC').order_by('stdno')
+    cnas = Stardands.objects.filter(stdclass__icontains='CNAS').order_by('stdno')
+    astm = Stardands.objects.filter(stdclass__icontains='ASTM').order_by('stdno')
+    gb = Stardands.objects.filter(stdclass__icontains='GB').order_by('stdno')
+
+    leader = Personel.objects.filter(profession__icontains='实验室主任').first()
+    zhiliang = Personel.objects.filter(profession__icontains='质量').first()
+    jishu = Personel.objects.filter(profession__icontains='技术负责').first()
+    qa = Personel.objects.filter(profession__icontains='QA').order_by('name')
+    qianziren = Personel.objects.filter(profession__icontains='授权').order_by('name')
+    neishen = Personel.objects.filter(profession__icontains='内审').order_by('name')
+    chemperson = Personel.objects.filter(profession__icontains='化学').order_by('name')
+    phycperson = Personel.objects.filter(profession__icontains='机性').order_by('name')
+    jinxperson = Personel.objects.filter(profession__icontains='金相').order_by('name')
+    chemequip = Equip.objects.filter(equipfield__icontains='化学').order_by('equipname')
+    phyequip = Equip.objects.filter(equipfield__icontains='机性').order_by('equipname')
+    jinxequip = Equip.objects.filter(equipfield__icontains='金相').order_by('equipname')
+    jilequip = Equip.objects.filter(equipfield__icontains='计量').order_by('equipname')
+    elseequip = Equip.objects.filter(equipfield__icontains='其他').order_by('equipname')
+
     shouce = Zhiliangshouce.objects.filter(fileclass__icontains='质量手册',user=request.user.username).order_by('-xuhao')
     chengxu = Zhiliangshouce.objects.filter(fileclass__icontains='程序文件',user=request.user.username).order_by('shouceno')
     third = Zhiliangshouce.objects.filter(fileclass__icontains='三层次文件',user=request.user.username).order_by('shouceno')
@@ -98,22 +118,18 @@ def tixi(request):
         chengxucurrent_page = chengxufenye.page(1)
     return render(request,'programs.html',locals())
 
-def personel(request):
-    leader = Personel.objects.filter(profession__icontains='实验室主任').first()
-    zhiliang = Personel.objects.filter(profession__icontains='质量').first()
-    jishu = Personel.objects.filter(profession__icontains='技术负责').first()
-    qa = Personel.objects.filter(profession__icontains='QA').order_by('name')
-    qianziren = Personel.objects.filter(profession__icontains='授权').order_by('name')
-    neishen = Personel.objects.filter(profession__icontains='内审').order_by('name')
-    chemperson = Personel.objects.filter(profession__icontains='化学').order_by('name')
-    phycperson = Personel.objects.filter(profession__icontains='机性').order_by('name')
-    jinxperson = Personel.objects.filter(profession__icontains='金相').order_by('name')
-    chemequip = Equip.objects.filter(equipfield__icontains='化学').order_by('equipname')
-    phyequip = Equip.objects.filter(equipfield__icontains='机性').order_by('equipname')
-    jinxequip = Equip.objects.filter(equipfield__icontains='金相').order_by('equipname')
-    jilequip = Equip.objects.filter(equipfield__icontains='计量').order_by('equipname')
-    elseequip = Equip.objects.filter(equipfield__icontains='其他').order_by('equipname')
-    return render(request,'personel.html',locals())
+
+def jilus(request):
+    dates = Record.objects.extra(select={"tab_times":"date_format(tabtime,'%%Y')"}).values('tab_times').distinct()
+    return render(request,'jilus.html',locals())
+
+def jilu(request,tab_time):
+    dates = Record.objects.extra(select={"tab_times":"date_format(tabtime,'%%Y')"}).values('tab_times').distinct()
+    zhiliang = Record.objects.filter(tabtime__year=tab_time,tabtype__contains='质量')
+    jishu = Record.objects.filter(tabtime__year=tab_time,tabtype__contains='技术')
+    neishen = Record.objects.filter(tabtime__year=tab_time,tabtype__contains='内审')
+    ncrs = Record.objects.filter(tabtime__year=tab_time,tabtype__contains='NCR')
+    return render(request, 'jilu.html', locals())
 
 
 def record(request):
@@ -181,7 +197,7 @@ def uploadstd(request):
         uploadstd = Uploadstd(request.POST,request.FILES)
         if uploadstd.is_valid():
             uploadstd.save()
-            return redirect('zhunze')
+            return redirect('tixi')
     return render(request,'uploadstd.html',locals())
 
 

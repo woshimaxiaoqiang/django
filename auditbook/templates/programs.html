@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>体系文件</title>
+<title>体系</title>
+{% extends 'base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/bs/bs3.3.7/css/bootstrap.min.css">
     <style>
         body{
-            padding-top: 50px;
-            font: 16px 'Microsoft YaHei UI', sans-serif;
-        }
-        li:active{
-            background-color: lightseagreen;
+            margin-top: 60px;
         }
         .table-striped>tbody>tr:nth-of-type(odd){
             background-color: lightblue;
@@ -66,229 +62,222 @@
             background-color: #cccccc;
         }
     </style>
-    <link rel="stylesheet" href="/static/bs/bs3.3.7/css/bootstrap.min.css">
-    <script src="/static/bs/bs3.3.7/js/jquery-3.4.1.js"></script>
-    <script src="/static/bs/bs3.3.7/js/bootstrap.min.js"></script>
+{% endblock %}
 
-</head>
-<body>
-<div class="navlist col-md-2">
-    <h4>文件 <span></span></h4>
-    <ul id="tixi">
-        <li><a href="#">质量手册</a></li>
-        <li><a href="#">程序文件</a></li>
-        <li><a href="#">三层次文件</a></li>
-        <li><a href="#">技术管理规定</a></li>
-    </ul>
-    <h4>标准 <span></span></h4>
-    <ul id="stanards">
-        <li><a href="#">AC准则</a></li>
-        <li><a href="#">CNAS/DILAC准则</a></li>
-        <li><a href="#">ASTM</a></li>
-        <li><a href="#">国家标准</a></li>
-    </ul>
-    <h4>人员 <span></span></h4>
-    <ul>
-        <li><a href="#">管理人员</a></li>
-        <li><a href="#">QA人员</a></li>
-        <li><a href="#">内审员</a></li>
-        <li><a href="#">授权签字人</a></li>
-        <li><a href="#">技术人员</a></li>
-    </ul>
-    <h4>设备 <span></span></h4>
-    <ul>
-        <li><a href="#">化学专业</a></li>
-        <li><a href="#">机性专业</a></li>
-        <li><a href="#">金相专业</a></li>
-    </ul>
-</div>
-<div id="content1" class="col-md-10 tab-content">
-    <div id="shouce" name="shouce" class="tab-pane active">
-        <table class="table table-striped table-hover small">
-            <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
-                质&nbsp&nbsp&nbsp&nbsp量&nbsp&nbsp&nbsp&nbsp手&nbsp&nbsp&nbsp&nbsp册
-                <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a>
-            </caption>
-            <thead>
-            <tr>
-                <th>序号</th>
-                <th>手册编号</th>
-                <th>手册名称</th>
-                <th>编制者</th>
-                <th>操作</th>
-            </tr>
-            </thead>
-            <tbody id="text">
-            {% for shou in shoucecurrent_page %}
-                <tr style="height: 10px;">
-                    <td>{{ shou.xuhao }}</td>
-                    <td>{{ shou.shouceno }}</td>
-                    <td><a href="/tixi/{{ shou.shouceadd }}">{{ shou.shoucename }}</a></td>
-                    <td>{{ shou.shouceauthor }}</td>
-                    <td class="btn-group">
-                        <a href="/tixi/{{ shou.shouceadd }}" class="btn btn-success btn-xs">查看</a>
-                        <a href="/deleteshouce/{{ shou.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
-                    </td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-        <nav aria-label="Page navigation">
-            <ul class="pagination small">
-                {% if shoucecurrent_page.has_previous %}
-                    <li><a href="?page={{ shoucecurrent_num|add:-1 }}" aria-label="Previous">
-                        <span aria-hidden="true">上一页</span></a></li>
-                {% else %}
-                    <li class="disabled"><a href="" aria-label="Previous">上一页</a></li>
-                {% endif %}
-                {% for item in shoucefenye.page_range %}
-                    {% if shoucecurrent_num == item %}
-                        <li class="active"><a href="?page={{ item }}">{{ item }}</a></li>
-                    {% else %}
-                        <li><a href="?page={{ item }}">{{ item }}</a></li>
-                    {% endif %}
-                {% endfor %}
-                {% if shoucecurrent_page.has_next %}
-                    <li><a href="?page={{ shoucecurrent_num|add:1 }}" aria-label="Next"><span aria-hidden="true">下一页</span></a></li>
-                {% else %}
-                    <li class="disabled"><a href="" aria-label="Next"><span aria-hidden="true">下一页</span></a></li>
-                {% endif %}
+
+{% block shouye %}
+    <div class="container">
+        <div class="navlist col-md-2" style="border-bottom: 0">
+            <h4>文&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp件 <span></span></h4>
+            <ul id="tixi">
+                <li><a href="#">质量手册</a></li>
+                <li><a href="#">程序文件</a></li>
+                <li><a href="#">三层次文件</a></li>
+                <li><a href="#">技术管理规定</a></li>
             </ul>
-        </nav>
-    </div>
-    <div id="wenjian" name="wenjian" class="tab-pane">
-        <table class="table table-striped table-hover small">
-            <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
-                程&nbsp&nbsp&nbsp&nbsp序&nbsp&nbsp&nbsp&nbsp文&nbsp&nbsp&nbsp&nbsp件
-                <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
-            <thead>
-            <tr>
-                <th>程序编号</th>
-                <th>程序名称</th>
-                <th>编制者</th>
-                <th>操作</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for cheng in chengxucurrent_page %}
-                <tr>
-                    <td>{{ cheng.shouceno }}</td>
-                    <td><a href="/tixi/{{ cheng.shouceadd }}">{{ cheng.shoucename }}</a></td>
-                    <td>{{ cheng.shouceauthor }}</td>
-                    <td class="btn-group">
-                        <a href="/tixi/{{ cheng.shouceadd }}" class="btn btn-success btn-xs">查看</a>
-                        <a href="/deleteshouce/{{ cheng.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
-                    </td>
-                </tr>
-            {% endfor %}
-
-            </tbody>
-        </table>
-        <nav aria-label="Page navigation">
-            <ul class="pagination small">
-                {% if chengxucurrent_page.has_previous %}
-                    <li><a href="?page={{ chengxucurrent_num|add:-1 }}" aria-label="Previous">
-                        <span aria-hidden="true">上一页</span></a></li>
-                {% else %}
-                    <li class="disabled"><a href="" aria-label="Previous">上一页</a></li>
-                {% endif %}
-                {% for item in chengxufenye.page_range %}
-                    {% if chengxucurrent_num == item %}
-                        <li class="active"><a href="?page={{ item }}">{{ item }}</a></li>
-                    {% else %}
-                        <li><a href="?page={{ item }}">{{ item }}</a></li>
-                    {% endif %}
-                {% endfor %}
-                {% if chengxucurrent_page.has_next %}
-                    <li><a href="?page={{ chengxucurrent_num|add:1 }}" aria-label="Next"><span aria-hidden="true">下一页</span></a></li>
-                {% else %}
-                    <li class="disabled"><a href="" aria-label="Next"><span aria-hidden="true">下一页</span></a></li>
-                {% endif %}
+            <h4>标&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp准 <span></span></h4>
+            <ul id="stanards">
+                <li><a href="#">AC准则</a></li>
+                <li><a href="#">CNAS/DILAC</a></li>
+                <li><a href="#">ASTM</a></li>
+                <li><a href="#">国家标准</a></li>
             </ul>
-        </nav>
-    </div>
-    <div id="zhidaoshu" name="zhidaoshu" class="tab-pane">
-        <table class="table table-striped table-hover small">
-            <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
-                三&nbsp&nbsp&nbsp&nbsp层&nbsp&nbsp&nbsp&nbsp次&nbsp&nbsp&nbsp&nbsp文&nbsp&nbsp&nbsp&nbsp件
-                <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 300px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
-            <thead>
-            <tr>
-                <th>文件编号</th>
-                <th>文件名称</th>
-                <th>编制者</th>
-                <th>操作</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for thi in third %}
-                <tr>
-                    <td>{{ thi.shouceno }}</td>
-                    <td><a href="/tixi/{{ thi.shouceadd }}">{{ thi.shoucename }}</a></td>
-                    <td>{{ thi.shouceauthor }}</td>
-                    <td class="btn-group">
-                        <a href="/tixi/{{ thi.shouceadd }}" class="btn btn-success btn-xs">查看</a>
-                        <a href="/deleteshouce/{{ thi.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
-                    </td>
-                </tr>
-            {% endfor %}
+            <h4>人&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp员 <span></span></h4>
+            <ul id="person">
+                <li><a href="#">管理人员</a></li>
+                <li><a href="#">QA人员</a></li>
+                <li><a href="#">授权签字人</a></li>
+                <li><a href="#">内审员</a></li>
+                <li><a href="#">技术人员</a></li>
+            </ul>
+            <h4>设&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp备 <span></span></h4>
+            <ul id="equip">
+                <li><a href="#">化学专业</a></li>
+                <li><a href="#">机性专业</a></li>
+                <li><a href="#">金相专业</a></li>
+                <li><a href="#">计量器具</a></li>
+                <li><a href="#">其他设备</a></li>
+            </ul>
+        </div>
+        <div id="content1" class="col-md-10 tab-content">
+            <div id="shouce" name="shouce" class="tab-pane active">
+                <table class="table table-striped table-hover small">
+                    <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
+                        质&nbsp&nbsp&nbsp&nbsp量&nbsp&nbsp&nbsp&nbsp手&nbsp&nbsp&nbsp&nbsp册
+                        <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a>
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>手册编号</th>
+                        <th>手册名称</th>
+                        <th>编制者</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="text">
+                    {% for shou in shoucecurrent_page %}
+                        <tr style="height: 10px;">
+                            <td>{{ shou.xuhao }}</td>
+                            <td>{{ shou.shouceno }}</td>
+                            <td><a href="/tixi/{{ shou.shouceadd }}">{{ shou.shoucename }}</a></td>
+                            <td>{{ shou.shouceauthor }}</td>
+                            <td class="btn-group">
+                                <a href="/tixi/{{ shou.shouceadd }}" class="btn btn-success btn-xs">查看</a>
+                                <a href="/deleteshouce/{{ shou.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination small">
+                        {% if shoucecurrent_page.has_previous %}
+                            <li><a href="?page={{ shoucecurrent_num|add:-1 }}" aria-label="Previous">
+                                <span aria-hidden="true">上一页</span></a></li>
+                        {% else %}
+                            <li class="disabled"><a href="" aria-label="Previous">上一页</a></li>
+                        {% endif %}
+                        {% for item in shoucefenye.page_range %}
+                            {% if shoucecurrent_num == item %}
+                                <li class="active"><a href="?page={{ item }}">{{ item }}</a></li>
+                            {% else %}
+                                <li><a href="?page={{ item }}">{{ item }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if shoucecurrent_page.has_next %}
+                            <li><a href="?page={{ shoucecurrent_num|add:1 }}" aria-label="Next"><span aria-hidden="true">下一页</span></a></li>
+                        {% else %}
+                            <li class="disabled"><a href="" aria-label="Next"><span aria-hidden="true">下一页</span></a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+            <div id="wenjian" name="wenjian" class="tab-pane">
+                <table class="table table-striped table-hover small">
+                    <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
+                        程&nbsp&nbsp&nbsp&nbsp序&nbsp&nbsp&nbsp&nbsp文&nbsp&nbsp&nbsp&nbsp件
+                        <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
+                    <thead>
+                    <tr>
+                        <th>程序编号</th>
+                        <th>程序名称</th>
+                        <th>编制者</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for cheng in chengxucurrent_page %}
+                        <tr>
+                            <td>{{ cheng.shouceno }}</td>
+                            <td><a href="/tixi/{{ cheng.shouceadd }}">{{ cheng.shoucename }}</a></td>
+                            <td>{{ cheng.shouceauthor }}</td>
+                            <td class="btn-group">
+                                <a href="/tixi/{{ cheng.shouceadd }}" class="btn btn-success btn-xs">查看</a>
+                                <a href="/deleteshouce/{{ cheng.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
 
-            </tbody>
-        </table>
-    </div>
-    <div id="guanliguiding" name="guanliguiding" class="tab-pane">
-        <table class="table table-striped table-hover small">
-            <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
-                技&nbsp&nbsp&nbsp&nbsp术&nbsp&nbsp&nbsp&nbsp管&nbsp&nbsp&nbsp&nbsp理&nbsp&nbsp&nbsp&nbsp规&nbsp&nbsp&nbsp&nbsp定
-                <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 280px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
-            <thead>
-            <tr>
-                <th>文件编号</th>
-                <th>文件名称</th>
-                <th>编制者</th>
-                <th>操作</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for jishu in jishuguanli %}
-                <tr>
-                    <td>{{ jishu.shouceno }}</td>
-                    <td><a href="/tixi/{{ jishu.shouceadd }}">{{ jishu.shoucename }}</a></td>
-                    <td>{{ jishu.shouceauthor }}</td>
-                    <td class="btn-group">
-                        <a href="/tixi/{{ jishu.shouceadd }}" class="btn btn-success btn-xs">查看</a>
-                        <a href="/deleteshouce/{{ jishu.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
-                    </td>
-                </tr>
-            {% endfor %}
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination small">
+                        {% if chengxucurrent_page.has_previous %}
+                            <li><a href="?page={{ chengxucurrent_num|add:-1 }}" aria-label="Previous">
+                                <span aria-hidden="true">上一页</span></a></li>
+                        {% else %}
+                            <li class="disabled"><a href="" aria-label="Previous">上一页</a></li>
+                        {% endif %}
+                        {% for item in chengxufenye.page_range %}
+                            {% if chengxucurrent_num == item %}
+                                <li class="active"><a href="?page={{ item }}">{{ item }}</a></li>
+                            {% else %}
+                                <li><a href="?page={{ item }}">{{ item }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if chengxucurrent_page.has_next %}
+                            <li><a href="?page={{ chengxucurrent_num|add:1 }}" aria-label="Next"><span aria-hidden="true">下一页</span></a></li>
+                        {% else %}
+                            <li class="disabled"><a href="" aria-label="Next"><span aria-hidden="true">下一页</span></a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+            <div id="zhidaoshu" name="zhidaoshu" class="tab-pane">
+                <table class="table table-striped table-hover small">
+                    <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
+                        三&nbsp&nbsp&nbsp&nbsp层&nbsp&nbsp&nbsp&nbsp次&nbsp&nbsp&nbsp&nbsp文&nbsp&nbsp&nbsp&nbsp件
+                        <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 300px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
+                    <thead>
+                    <tr>
+                        <th>文件编号</th>
+                        <th>文件名称</th>
+                        <th>编制者</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for thi in third %}
+                        <tr>
+                            <td>{{ thi.shouceno }}</td>
+                            <td><a href="/tixi/{{ thi.shouceadd }}">{{ thi.shoucename }}</a></td>
+                            <td>{{ thi.shouceauthor }}</td>
+                            <td class="btn-group">
+                                <a href="/tixi/{{ thi.shouceadd }}" class="btn btn-success btn-xs">查看</a>
+                                <a href="/deleteshouce/{{ thi.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
 
-            </tbody>
-        </table>
-    </div>
-    {#    <ul class="col-md-2 nav navbar-default" id="wenjiandaohang">#}
-    {#        <h3 id="wenjiandao" style="margin-left: 45px">体系文件</h3>#}
-    {#        <li class="active"><a data-toggle="tab" href="#shouce">质量手册</a></li>#}
-    {#        <li><a data-toggle="tab" href="#wenjian">程序文件</a></li>#}
-    {#        <li><a data-toggle="tab" href="#zhidaoshu">三层次文件</a></li>#}
-    {#        <li><a data-toggle="tab" href="#guanliguiding">技术管理规定</a></li>#}
-    {#    </ul>#}
-</div>
+                    </tbody>
+                </table>
+            </div>
+            <div id="guanliguiding" name="guanliguiding" class="tab-pane">
+                <table class="table table-striped table-hover small">
+                    <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
+                        技&nbsp&nbsp&nbsp&nbsp术&nbsp&nbsp&nbsp&nbsp管&nbsp&nbsp&nbsp&nbsp理&nbsp&nbsp&nbsp&nbsp规&nbsp&nbsp&nbsp&nbsp定
+                        <a href="{% url 'uploadfile' %}" class="btn btn-warning btn-xs" style="margin-left: 280px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
+                    <thead>
+                    <tr>
+                        <th>文件编号</th>
+                        <th>文件名称</th>
+                        <th>编制者</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for jishu in jishuguanli %}
+                        <tr>
+                            <td>{{ jishu.shouceno }}</td>
+                            <td><a href="/tixi/{{ jishu.shouceadd }}">{{ jishu.shoucename }}</a></td>
+                            <td>{{ jishu.shouceauthor }}</td>
+                            <td class="btn-group">
+                                <a href="/tixi/{{ jishu.shouceadd }}" class="btn btn-success btn-xs">查看</a>
+                                <a href="/deleteshouce/{{ jishu.id }}" onclick="shanchu()" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
 
-<div id="content2" class="col-md-10" style="display: none">
-        <div style="display: block">
-            <table class="table table-striped table-hover small">
-                <caption style="text-align: right;font-size: 20px;background-color:darkblue;color: white;height: 40px">
-                    A&nbsp&nbsp&nbsp&nbspC&nbsp&nbsp&nbsp&nbsp准&nbsp&nbsp&nbsp&nbsp则
-                    <a href="{% url 'uploadstd' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a>
-                </caption>
-                <thead>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="content2" class="col-md-10" style="display: none">
+            <div style="display: block">
+                <table class="table table-striped table-hover small">
+                    <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
+                        A&nbsp&nbsp&nbsp&nbspC&nbsp&nbsp&nbsp&nbsp准&nbsp&nbsp&nbsp&nbsp则
+                        <a href="{% url 'uploadstd' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a>
+                    </caption>
+                    <thead>
                     <tr>
                         <th>AC编号</th>
                         <th>AC名称</th>
                         <th>操作</th>
                     </tr>
-                </thead>
-                <tbody id="text">
+                    </thead>
+                    <tbody id="text">
                     {% for a in ac %}
                         <tr>
                             <td>{{ a.stdno }}</td>
@@ -299,22 +288,22 @@
                             </td>
                         </tr>
                     {% endfor %}
-                </tbody>
-            </table>
-        </div>
-        <div>
-            <table class="table table-striped table-hover small">
-                <caption style="text-align: right;font-size: 20px;background-color:darkblue;color: white;height: 40px">
-                    CNAS/DILAC&nbsp&nbsp&nbsp&nbsp准则
-                <a href="{% url 'uploadstd' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
-                <thead>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table class="table table-striped table-hover small">
+                    <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
+                        CNAS/DILAC&nbsp&nbsp&nbsp&nbsp准则
+                        <a href="{% url 'uploadstd' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
+                    <thead>
                     <tr>
                         <th>CL编号</th>
                         <th>CL名称</th>
                         <th>操作</th>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
                     {% for cna in cnas %}
                         <tr>
                             <td>{{ cna.stdno }}</td>
@@ -326,22 +315,22 @@
                         </tr>
                     {% endfor %}
 
-                </tbody>
-            </table>
-        </div>
-        <div>
-            <table class="table table-striped table-hover small">
-                <caption style="text-align: right;font-size: 20px;background-color:darkblue;color: white;height: 40px">
-                    ASTM
-                <a href="{% url 'uploadstd' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
-                <thead>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table class="table table-striped table-hover small">
+                    <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
+                        ASTM
+                        <a href="{% url 'uploadstd' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
+                    <thead>
                     <tr>
                         <th>ASTM编号</th>
                         <th>ASTM名称</th>
                         <th>操作</th>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
                     {% for ast in astm %}
                         <tr>
                             <td>{{ ast.stdno }}</td>
@@ -353,22 +342,22 @@
                         </tr>
                     {% endfor %}
 
-                </tbody>
-            </table>
-        </div>
-        <div>
-            <table class="table table-striped table-hover small">
-                <caption style="text-align: right;font-size: 20px;background-color:darkblue;color: white;height: 40px">
-                    国&nbsp&nbsp&nbsp&nbsp家&nbsp&nbsp&nbsp&nbsp标&nbsp&nbsp&nbsp&nbsp准
-                <a href="{% url 'uploadstd' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
-                <thead>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table class="table table-striped table-hover small">
+                    <caption style="text-align: right;font-size: 20px;background-color:#737373;color: white;height: 40px">
+                        国&nbsp&nbsp&nbsp&nbsp家&nbsp&nbsp&nbsp&nbsp标&nbsp&nbsp&nbsp&nbsp准
+                        <a href="{% url 'uploadstd' %}" class="btn btn-warning btn-xs" style="margin-left: 350px;margin-right: 20px;margin-top: -3px">文件上传</a></caption>
+                    <thead>
                     <tr>
                         <th>标准编号</th>
                         <th>标准名称</th>
                         <th>操作</th>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
                     {% for g in gb %}
                         <tr>
                             <td>{{ g.stdno }}</td>
@@ -380,116 +369,350 @@
                         </tr>
                     {% endfor %}
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="content3" class="col-md-10" style="display: none">
+            <div style="display: block">
+                <table class="table table-bordered table-hover table-striped small">
+                    <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">管&nbsp;&nbsp;理&nbsp;&nbsp;层&nbsp;&nbsp;人&nbsp;&nbsp;员</caption>
+                    <thead>
+                    <th>姓名</th>
+                    <th>职务</th>
+                    <th>专业</th>
+                    <th>操作</th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{{ leader.name }}</td>
+                        <td>{{ leader.position }}</td>
+                        <td>{{ leader.profession }}</td>
+                        <td>
+                            <a href="/deleteper/{{ leader.id }}" class="btn btn-danger btn-xs">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{ zhiliang.name }}</td>
+                        <td>{{ zhiliang.position }}</td>
+                        <td>{{ zhiliang.profession }}</td>
+                        <td><a href="" class="btn btn-danger btn-xs">删除</a></td>
+                    </tr>
+                    <tr>
+                        <td>{{ jishu.name }}</td>
+                        <td>{{ jishu.position }}</td>
+                        <td>{{ jishu.profession }}</td>
+                        <td><a href="" class="btn btn-danger btn-xs">删除</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table class="table table-bordered table-hover table-striped small">
+                    <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">Q&nbsp;&nbsp;A&nbsp;&nbsp;人&nbsp;&nbsp;员</caption>
+                    <thead>
+                    <th>姓名</th>
+                    <th>职位</th>
+                    <th>专业</th>
+                    <th>操作</th>
+                    </thead>
+                    <tbody>
+                    {% for q in qa %}
+                        <tr>
+                            <td><a href="">{{ q.name }}</a></td>
+                            <td>{{ q.position }}</td>
+                            <td>{{ q.profession }}</td>
+                            <td class="btn btn-group-xs center-block">
+                                <a href="" class="btn btn-success">查看</a>
+                                <a href="" class="btn btn-danger">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <img height="100" width="100" src="{% url 'yanzhm' %}" alt="">
+            </div>
+            <div>
+                <table class="table table-bordered table-hover table-striped small">
+                    <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">授&nbsp;&nbsp;权&nbsp;&nbsp;签&nbsp;&nbsp;字&nbsp;&nbsp;人</caption>
+                    <thead>
+                    <th>姓名</th>
+                    <th>职位</th>
+                    <th>授权领域</th>
+                    <th>操作</th>
+                    </thead>
+                    <tbody>
+                    {% for qianzi in qianziren %}
+                        <tr>
+                            <td>{{ qianzi.name }}</td>
+                            <td>{{ qianzi.position }}</td>
+                            <td>{{ qianzi.profession }}</td>
+                            <td class="btn btn-group-xs center-block">
+                                <a href="" class="btn btn-success">查看</a>
+                                <a href="" class="btn btn-danger">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table class="table table-bordered table-hover table-striped small">
+                    <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">内&nbsp;&nbsp;审&nbsp;&nbsp;员</caption>
+                    <thead>
+                    <th>姓名</th>
+                    <th>职称</th>
+                    <th>职位</th>
+                    </thead>
+                    <tbody>
+                    {% for nei in neishen %}
+                        <tr>
+                            <td>{{ nei.name }}</td>
+                            <td>{{ nei.position }}</td>
+                            <td>{{ nei.profession }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table class="table table-bordered table-hover table-striped small">
+                    <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">各&nbsp;&nbsp;专&nbsp;&nbsp;业&nbsp;&nbsp;技&nbsp;&nbsp;术&nbsp;&nbsp;人&nbsp;&nbsp;员</caption>
+                    <thead>
+                    <th>姓名</th>
+                    <th>职称</th>
+                    <th>职位</th>
+                    <th>专业</th>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div id="content4" class="col-md-10" style="display: none">
+            <div style="display: block">
+                <table class="table table-hover table-striped small">
+                    <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">化学专业设备</caption>
+                    <thead>
+                    <th>设备名称</th>
+                    <th>设备编号</th>
+                    <th>设备型号</th>
+                    <th>操作</th>
+                    </thead>
+                    <tbody>
+                    {% for chem in chemequip %}
+                        <tr>
+                            <td>{{ chem.equipname }}</td>
+                            <td>{{ chem.equipno }}</td>
+                            <td>{{ chem.equipmodel }}</td>
+                            <td class="btn btn-group">
+                                <a href="" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <video class="col-md-offset-2" src="" controls="controls" width="500" height="300"></video>
+            </div>
+            <div>
+                <table class="table table-hover table-striped small">
+                    <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">机性专业设备</caption>
+                    <thead>
+                        <th>设备名称</th>
+                        <th>设备编号</th>
+                        <th>设备型号</th>
+                        <th>操作</th>
+                    </thead>
+                    <tbody>
+                    {% for phy in phyequip %}
+                        <tr>
+                            <td>{{ phy.equipname }}</td>
+                            <td>{{ phy.equipno }}</td>
+                            <td>{{ phy.equipmodel }}</td>
+                            <td class="btn btn-group">
+                                <a href="" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table class="table table-hover table-striped small">
+                    <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">金相专业设备</caption>
+                    <thead>
+                    <th>设备名称</th>
+                    <th>设备编号</th>
+                    <th>设备型号</th>
+                    <th>操作</th>
+                    </thead>
+                    <tbody>
+                    {% for jinx in jinxequip %}
+                        <tr>
+                            <td>{{ jinx.equipname }}</td>
+                            <td>{{ jinx.equipno }}</td>
+                            <td>{{ jinx.equipmodel }}</td>
+                            <td class="btn btn-group">
+                                <a href="" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table class="table table-hover table-striped small">
+                    <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">计量器具</caption>
+                    <thead>
+                    <th>设备名称</th>
+                    <th>设备编号</th>
+                    <th>设备型号</th>
+                    <th>操作</th>
+                    </thead>
+                    <tbody>
+                    {% for jil in jilequip %}
+                        <tr>
+                            <td>{{ jil.equipname }}</td>
+                            <td>{{ jil.equipno }}</td>
+                            <td>{{ jil.equipmodel }}</td>
+                            <td class="btn btn-group">
+                                <a href="" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table class="table table-hover table-striped small">
+                    <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">其他设备</caption>
+                    <thead>
+                    <th>设备名称</th>
+                    <th>设备编号</th>
+                    <th>设备型号</th>
+                    <th>操作</th>
+                    </thead>
+                    <tbody>
+                    {% for els in elseequip %}
+                        <tr>
+                            <td>{{ els.equipname }}</td>
+                            <td>{{ els.equipno }}</td>
+                            <td>{{ els.equipmodel }}</td>
+                            <td class="btn btn-group">
+                                <a href="" class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
+{% endblock %}
 
 
-
-
-
-<div class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <a href="" class="navbar-brand">Audit.com</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li><a href="{% url 'index' %}">首页</a></li>
-            <li><a href="{% url 'zhunze' %}">准则/标准</a></li>
-            <li><a href="{% url 'tixi' %}">体系文件</a></li>
-            <li><a href="{% url 'personel' %}">人员/设备</a></li>
-            <li><a href="{% url 'record' %}">历年记录</a></li>
-            <li><a href="{% url 'getready' %}">审核准备</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Hi!&nbsp{{ request.user.username }}</a></li>
-            <li><a href="{% url 'logout' %}">注销</a></li>
-        </ul>
-    </div>
-</div>
-
-<h3>Ajax练习</h3>
-<button class="ajax">Ajax</button>
-<p class="tex"></p>
-<hr>
-<video src="" width="200" height="200" controls="controls" style="margin-left: 100px">视频</video>
-
-<script>
-    $(".ajax").click(function () {
-        $.ajax({
-            url:"/test_ajax/",
-            type:"get",
-            data:{
-              a:1,
-              b:2,
-            },
-            success:function (data) {
-                console.log(data)
-                $(".tex").html(data)
+{% block js %}
+    <script>
+        function shanchu() {
+            var shan = confirm('确定删除？');
+            if (shan){
+                window.event.returnValue = true;
             }
-        })
-    });
-
-</script>
-
-
-<script>
-    function shanchu() {
-        var shan = confirm('确定删除？');
-        if (shan){
-            window.event.returnValue = true;
-        }
-        else {
-            window.event.returnValue = false;
-        }
-    }
-    $(document).ready(function () {
-        $('.navlist h4').click(function () {
-            $(this).toggleClass('open').siblings('h4').removeClass('open').end().next('ul').slideToggle().siblings('ul').slideUp();
-        })
-        $("#tixi li").click(function () {
-            $("#content1").show();
-            $("#content2").hide();
-        })
-        $("#stanards li").click(function () {
-            $("#content2").show();
-            $("#content1").hide();
-        })
-    })
-    var stanards = document.getElementById('stanards');
-    var li1 = stanards.getElementsByTagName('li');
-    var content2 = document.getElementById('content2');
-    var p1 = content2.getElementsByTagName('div');
-    for (var i=0;i<li1.length;i++){
-        li1[i].setAttribute('a',i);
-        li1[i].onclick=function () {
-            var a = this.getAttribute('a');
-            this.className='active';
-            for (var j=0;j<p1.length;j++){
-                p1[j].style.display='none';
+            else {
+                window.event.returnValue = false;
             }
-            p1[a].style.display='block';
         }
-    }
-    var tixi = document.getElementById('tixi');
-    var li2 = tixi.getElementsByTagName('li');
-    var content1 = document.getElementById('content1');
-    var p2 = content1.getElementsByTagName('div');
-    for (var i=0;i<li2.length;i++){
-        li2[i].setAttribute('a',i);
-        li2[i].onclick=function () {
-            var a = this.getAttribute('a');
-            this.class='active';
-            for (var j=0;j<p2.length;j++){
-                p2[j].style.display='none';
+        $(document).ready(function () {
+            $('.navlist h4').click(function () {
+                $(this).toggleClass('open').siblings('h4').removeClass('open').end().next('ul').slideToggle().siblings('ul').slideUp();
+            })
+            $("#tixi li").click(function () {
+                $("#content1").show();
+                $("#content2").hide();
+                $("#content3").hide();
+                $("#content4").hide();
+            });
+            $("#stanards li").click(function () {
+                $("#content2").show();
+                $("#content1").hide();
+                $("#content3").hide();
+                $("#content4").hide();
+            });
+            $("#person li").click(function () {
+                $("#content3").show();
+                $("#content1").hide();
+                $("#content2").hide();
+                $("#content4").hide();
+            });
+            $("#equip li").click(function () {
+                $("#content4").show();
+                $("#content1").hide();
+                $("#content2").hide();
+                $("#content3").hide();
+            });
+        })
+
+        var stanards = document.getElementById('stanards');
+        var li1 = stanards.getElementsByTagName('li');
+        var content2 = document.getElementById('content2');
+        var p1 = content2.getElementsByTagName('div');
+        for (var i=0;i<li1.length;i++){
+            li1[i].setAttribute('a',i);
+            li1[i].onclick=function () {
+                var a = this.getAttribute('a');
+                this.className='active';
+                for (var j=0;j<p1.length;j++){
+                    p1[j].style.display='none';
+                }
+                p1[a].style.display='block';
             }
-            p2[a].style.display='block';
         }
-    }
-</script>
 
+        var tixi = document.getElementById('tixi');
+        var li2 = tixi.getElementsByTagName('li');
+        var content1 = document.getElementById('content1');
+        var p2 = content1.getElementsByTagName('div');
+        for (var i=0;i<li2.length;i++){
+            li2[i].setAttribute('a',i);
+            li2[i].onclick=function () {
+                var a = this.getAttribute('a');
+                this.class='active';
+                for (var j=0;j<p2.length;j++){
+                    p2[j].style.display='none';
+                }
+                p2[a].style.display='block';
+            }
+        }
 
+        var person = document.getElementById('person');
+        var li3 = person.getElementsByTagName('li');
+        var content3 = document.getElementById('content3');
+        var p3 = content3.getElementsByTagName('div');
+        for (var i=0;i<li3.length;i++){
+            li3[i].setAttribute('a',i);
+            li3[i].onclick=function () {
+                var a =this.getAttribute('a');
+                this.className='active';
+                for (var j=0;j<p3.length;j++){
+                    p3[j].style.display='none';
+                }
+                p3[a].style.display='block';
+            }
+        }
 
-</body>
-</html>
+        var equip = document.getElementById('equip');
+        var li4 = equip.getElementsByTagName('li');
+        var content4 = document.getElementById('content4');
+        var p4 = content4.getElementsByTagName('div');
+        for (var i=0;i<li4.length;i++){
+            li4[i].setAttribute('a',i);
+            li4[i].onclick=function () {
+                var a =this.getAttribute('a');
+                this.className='active';
+                for (var j=0;j<p4.length;j++){
+                    p4[j].style.display='none';
+                }
+                p4[a].style.display='block';
+            }
+        }
+    </script>
+{% endblock %}

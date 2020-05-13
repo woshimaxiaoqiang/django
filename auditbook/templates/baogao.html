@@ -1,0 +1,425 @@
+<title>检测报告</title>
+{% extends 'base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/bs/bs3.3.7/css/bootstrap.min.css">
+    <style>
+        body{
+            margin-top: 60px;
+        }
+        ol{
+            list-style: none;
+        }
+        .navlist2 ol li a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navlist{
+            width: 180px;
+            border-bottom: 1px solid #cccccc;
+        }
+        .navlist h4{
+            position: relative;
+            margin: 0;
+            padding: 10px 20px;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: normal;
+            background-color: #333333;
+            border-top: 1px solid #cccccc;
+            cursor: pointer;
+        }
+        .navlist h4 span{
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #ac2925;
+            right: 20px;
+            top: 14px;
+            border-radius: 50%;
+        }
+        .navlist h4.open span{
+            background: #3c763d;
+            border-radius: 50%;
+        }
+        .navlist h4:hover{
+            background-color: #222222;
+        }
+        .navlist ul{
+            display: none;
+        }
+        .navlist ul li a{
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            font-size: 14px;
+            border-bottom: 0;
+        }
+        .navlist ul li a:hover{
+            background-color: #cccccc;
+        }
+        .huaxuesearch table tr td{
+            padding-left: 8px;
+        }
+    </style>
+{% endblock %}
+
+
+{% block shouye %}
+<div class="container">
+    <div class="navlist col-md-2" style="border-bottom: 0">
+        <h4>原&nbsp材&nbsp料 <span></span></h4>
+        <ul id="yuancailiao">
+            <li><a href="#">化学</a></li>
+            <li><a href="#">拉力</a></li>
+            <li><a href="#">金相</a></li>
+        </ul>
+        <h4>军&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp品 <span></span></h4>
+        <ul id="junpin">
+            <li><a href="#">化学</a></li>
+            <li><a href="#">拉力</a></li>
+            <li><a href="#">金相</a></li>
+        </ul>
+        <h4>转&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp包 <span></span></h4>
+        <ul id="zhuanbao">
+            <li><a href="#">化学</a></li>
+            <li><a href="#">拉力</a></li>
+            <li><a href="#">金相</a></li>
+        </ul>
+        <h4>外&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp协 <span></span></h4>
+        <ul id="waixie">
+            <li><a href="#">化学</a></li>
+            <li><a href="#">拉力</a></li>
+            <li><a href="#">金相</a></li>
+        </ul>
+    </div>
+    <div class="col-md-8 tab-content" id="content1">
+        <div class="tab-pane active">
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">化学检测报告</caption>
+                <thead>
+                    <th>报告编号</th>
+                    <th>委托编号</th>
+                    <th>材料牌号</th>
+                    <th>规格</th>
+                    <th>状态</th>
+                    <th>检测者</th>
+                    <th>校对者</th>
+                    <th>原始记录</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane">
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">拉力检测报告</caption>
+                <thead>
+                    <th>报告编号</th>
+                    <th>委托编号</th>
+                    <th>材料牌号</th>
+                    <th>规格</th>
+                    <th>状态</th>
+                    <th>检测者</th>
+                    <th>校对者</th>
+                    <th>原始记录</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane">
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">金相检测报告</caption>
+                <thead>
+                    <th>报告编号</th>
+                    <th>委托编号</th>
+                    <th>材料牌号</th>
+                    <th>规格</th>
+                    <th>状态</th>
+                    <th>检测者</th>
+                    <th>校对者</th>
+                    <th>原始记录</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-8 tab-content" id="content2" style="display: none">
+        <div class="tab-pane">
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">化学检测报告</caption>
+                <thead>
+                    <th>报告编号</th>
+                    <th>请托单位</th>
+                    <th>零件号</th>
+                    <th>零件名称</th>
+                    <th>零件数量</th>
+                    <th>检测者</th>
+                    <th>校对者</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane">
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">拉力检测报告</caption>
+                <thead>
+                    <th>报告编号</th>
+                    <th>请托单位</th>
+                    <th>零件号</th>
+                    <th>零件名称</th>
+                    <th>零件数量</th>
+                    <th>检测者</th>
+                    <th>校对者</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane">
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">金相检测报告</caption>
+                <thead>
+                    <th>报告编号</th>
+                    <th>请托单位</th>
+                    <th>零件号</th>
+                    <th>零件名称</th>
+                    <th>零件数量</th>
+                    <th>检测者</th>
+                    <th>校对者</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-8 tab-content" id="content3" style="display: none">
+        <div class="tab-pane">
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">化学检测报告</caption>
+                <thead>
+                    <th>报告编号</th>
+                    <th>请托单位</th>
+                    <th>零件号</th>
+                    <th>零件名称</th>
+                    <th>零件数量</th>
+                    <th>检测者</th>
+                    <th>校对者</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane">
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">拉力检测报告</caption>
+                <thead>
+                    <th>报告编号</th>
+                    <th>请托单位</th>
+                    <th>零件号</th>
+                    <th>零件名称</th>
+                    <th>零件数量</th>
+                    <th>检测者</th>
+                    <th>校对者</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane">
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">金相检测报告</caption>
+                <thead>
+                    <th>报告编号</th>
+                    <th>请托单位</th>
+                    <th>零件号</th>
+                    <th>零件名称</th>
+                    <th>零件数量</th>
+                    <th>检测者</th>
+                    <th>校对者</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-8 tab-content" id="content4" style="display: none">
+        <div class="tab-pane">
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">化学检测报告</caption>
+                <thead>
+                    <th>报告编号</th>
+                    <th>请托单位</th>
+                    <th>零件号</th>
+                    <th>零件名称</th>
+                    <th>材料牌号</th>
+                    <th>规格</th>
+                    <th>状态</th>
+                    <th>检测者</th>
+                    <th>校对者</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane">
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">拉力检测报告</caption>
+                <thead>
+                    <th>报告编号</th>
+                    <th>请托单位</th>
+                    <th>零件号</th>
+                    <th>零件名称</th>
+                    <th>材料牌号</th>
+                    <th>规格</th>
+                    <th>状态</th>
+                    <th>检测者</th>
+                    <th>校对者</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane">
+            <table class="table table-hover table-striped small">
+                <caption style="text-align: center;font-size: 15px;background-color:#737373;color: white;height: 40px">金相检测报告</caption>
+                <thead>
+                    <th>报告编号</th>
+                    <th>请托单位</th>
+                    <th>零件号</th>
+                    <th>零件名称</th>
+                    <th>材料牌号</th>
+                    <th>规格</th>
+                    <th>状态</th>
+                    <th>检测者</th>
+                    <th>校对者</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-2 navlist2">
+        <ol>
+            <li><a href="">领取任务</a></li>
+            <li><a href="">检测任务</a></li>
+            <li><a href="">校对任务</a></li>
+        </ol>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block js %}
+    <script>
+        $(document).ready(function () {
+            $(".navlist h4").click(function () {
+                $(this).toggleClass('open').siblings('h4').removeClass('open').end().next('ul').slideToggle().siblings('ul').slideUp();
+            });
+        })
+            $("#yuancailiao li").click(function () {
+                $("#content1").show();
+                $("#content2").hide();
+                $("#content3").hide();
+                $("#content4").hide();
+            });
+            $("#junpin li").click(function () {
+                $("#content2").show();
+                $("#content1").hide();
+                $("#content3").hide();
+                $("#content4").hide();
+            });
+            $("#zhuanbao li").click(function () {
+                $("#content3").show();
+                $("#content1").hide();
+                $("#content2").hide();
+                $("#content4").hide();
+            });
+            $("#waixie li").click(function () {
+                $("#content4").show();
+                $("#content1").hide();
+                $("#content2").hide();
+                $("#content3").hide();
+            });
+            var yuancailiao = document.getElementById('yuancailiao');
+            var li1 = yuancailiao.getElementsByTagName('li');
+            var content1 = document.getElementById('content1');
+            var p1 = content1.getElementsByTagName('div');
+            for (var i=0;i<li1.length;i++){
+                li1[i].setAttribute('a',i);
+                li1[i].onclick = function () {
+                    var a = this.getAttribute('a');
+                    this.className = 'active';
+                    for (var j=0;j<p1.length;j++){
+                        p1[j].style.display = 'none';
+                    }
+                    p1[a].style.display = 'block';
+                }
+            }
+            var junpin = document.getElementById('junpin');
+            var li2 = junpin.getElementsByTagName('li');
+            var content2 = document.getElementById('content2');
+            var p2 = content2.getElementsByTagName('div');
+            for (var i=0;i<li2.length;i++){
+                li2[i].setAttribute('a',i);
+                li2[i].onclick = function () {
+                    var a = this.getAttribute('a');
+                    this.className = 'active';
+                    for (var j=0;j<p2.length;j++){
+                        p2[j].style.display = 'none';
+                    }
+                    p2[a].style.display = 'block';
+                }
+            }
+            var zhuanbao = document.getElementById('zhuanbao');
+            var li3 = zhuanbao.getElementsByTagName('li');
+            var content3 = document.getElementById('content3');
+            var p3 = content3.getElementsByTagName('div');
+            for (var i=0;i<li3.length;i++){
+                li3[i].setAttribute('a',i);
+                li3[i].onclick = function () {
+                    var a = this.getAttribute('a');
+                    this.className = 'active';
+                    for (var j=0;j<p3.length;j++){
+                        p3[j].style.display = 'none';
+                    }
+                    p3[a].style.display = 'block';
+                }
+            }
+            var waixie = document.getElementById('waixie');
+            var li4 = waixie.getElementsByTagName('li');
+            var content4 = document.getElementById('content4');
+            var p4 = content4.getElementsByTagName('div');
+            for (var i=0;i<li4.length;i++){
+                li4[i].setAttribute('a',i);
+                li4[i].onclick = function () {
+                    var a = this.getAttribute('a');
+                    this.className = 'active';
+                    for (var j=0;j<p4.length;j++){
+                        p4[j].style.display = 'none';
+                    }
+                    p4[a].style.display = 'block';
+                }
+            }
+    </script>
+{% endblock %}
